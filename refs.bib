@@ -1,0 +1,423 @@
+% Verified bibliography for the training-vs-deployment-awareness project.
+% Every entry below was checked against its arXiv abstract page or venue page on 2026-10-19.
+% Non-peer-reviewed sources (preprints, code releases, blog posts) are labeled in the note field.
+
+% ---------- The direct precedent ----------
+
+@misc{sauers2026watching,
+  author       = {Sauers},
+  title        = {Watching: Language models can learn to tell when their activations are being read},
+  year         = {2026},
+  howpublished = {Code, data and results: \url{https://github.com/SauersML/watching}. Models: \url{https://huggingface.co/Sauers}. Announcement thread: \url{https://x.com/Sauers_/status/2111696312026677658}},
+  note         = {Unreviewed code release and X thread, 2026-10-18. The repository README states it was written by ``Opus 5.5 and GPT-6 Astra''. Not peer reviewed.}
+}
+
+% ---------- Models detecting or evading interventions on their own activations ----------
+
+@article{rivera2025steering,
+  author        = {Joshua Fonseca Rivera and David Demitri Africa},
+  title         = {Steering Awareness: Detecting Activation Steering from Within},
+  journal       = {arXiv preprint arXiv:2511.21399},
+  year          = {2025},
+  eprint        = {2511.21399},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2511.21399},
+  note          = {Preprint; v3 March 2026.}
+}
+
+@article{mcguinness2025chameleons,
+  author        = {Max McGuinness and Alex Serrano and Luke Bailey and Scott Emmons},
+  title         = {Neural Chameleons: Language Models Can Learn to Hide Their Thoughts from Unseen Activation Monitors},
+  journal       = {arXiv preprint arXiv:2512.11949},
+  year          = {2025},
+  eprint        = {2512.11949},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2512.11949},
+  note          = {Preprint.}
+}
+
+@inproceedings{bailey2026obfuscated,
+  author    = {Luke Bailey and Alex Serrano and Abhay Sheshadri and Mikhail Seleznyov and Jordan Taylor and Erik Jenner and Jacob Hilton and Stephen Casper and Carlos Guestrin and Scott Emmons},
+  title     = {Obfuscated Activations Bypass {LLM} Latent-Space Defenses},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2026},
+  eprint    = {2412.09565},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2412.09565}
+}
+
+@article{khatri2026sameprobe,
+  author        = {Alizishaan Khatri},
+  title         = {Same Probe, Different Numbers: Are Activation Probes Robust to Inference-Time Numerical Non-Determinism?},
+  journal       = {arXiv preprint arXiv:2609.31796},
+  year          = {2026},
+  eprint        = {2609.31796},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2609.31796},
+  note          = {Preprint, single author, September 2026.}
+}
+
+@inproceedings{jian2025metacognitive,
+  author    = {{Li Ji-An} and Hua-Dong Xiong and Robert C. Wilson and Marcelo G. Mattar and Marcus K. Benna},
+  title     = {Language Models Are Capable of Metacognitive Monitoring and Control of Their Internal Activations},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2025},
+  eprint    = {2505.13763},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2505.13763}
+}
+
+@article{lindsey2025introspective,
+  author        = {Jack Lindsey},
+  title         = {Emergent Introspective Awareness in Large Language Models},
+  journal       = {Transformer Circuits Thread},
+  year          = {2025},
+  eprint        = {2601.01828},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2601.01828},
+  note          = {Published on the Transformer Circuits Thread 2025-10-29; arXiv version January 2026. Not peer reviewed.}
+}
+
+@article{binder2024looking,
+  author        = {Felix J. Binder and James Chua and Tomek Korbak and Henry Sleight and John Hughes and Robert Long and Ethan Perez and Miles Turpin and Owain Evans},
+  title         = {Looking Inward: Language Models Can Learn About Themselves by Introspection},
+  journal       = {arXiv preprint arXiv:2410.13787},
+  year          = {2024},
+  eprint        = {2410.13787},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2410.13787}
+}
+
+@article{betley2025tellme,
+  author        = {Jan Betley and Xuchan Bao and Mart{\'\i}n Soto and Anna Sztyber-Betley and James Chua and Owain Evans},
+  title         = {Tell me about yourself: {LLMs} are aware of their learned behaviors},
+  journal       = {arXiv preprint arXiv:2501.11120},
+  year          = {2025},
+  eprint        = {2501.11120},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2501.11120}
+}
+
+% ---------- Behavior conditioned on the numerical format: quantization backdoors ----------
+
+@inproceedings{hong2021quantization,
+  author    = {Sanghyun Hong and Michael-Andrei Panaitescu-Liess and Yi{\u{g}}itcan Kaya and Tudor Dumitra{\c{s}}},
+  title     = {Qu-{ANTI}-zation: Exploiting Quantization Artifacts for Achieving Adversarial Outcomes},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2021},
+  eprint    = {2110.13541},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2110.13541}
+}
+
+@inproceedings{egashira2024exploiting,
+  author    = {Kazuki Egashira and Mark Vero and Robin Staab and Jingxuan He and Martin Vechev},
+  title     = {Exploiting {LLM} Quantization},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2024},
+  eprint    = {2405.18137},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2405.18137}
+}
+
+@inproceedings{egashira2025mindthegap,
+  author    = {Kazuki Egashira and Robin Staab and Mark Vero and Jingxuan He and Martin Vechev},
+  title     = {Mind the Gap: A Practical Attack on {GGUF} Quantization},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2025},
+  eprint    = {2505.23786},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2505.23786}
+}
+
+@article{loose2026floatdoor,
+  author    = {Nils Loose and Jonas Sander and Felix M{\"a}chtle and Thomas Eisenbarth},
+  title     = {{FloatDoor}: Platform-Triggered Backdoors in {LLMs}},
+  journal   = {arXiv preprint arXiv:2606.19535},
+  year      = {2026},
+  eprint    = {2606.19535},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2606.19535}
+}
+
+% ---------- Fingerprinting the serving stack from outside ----------
+
+@article{zhang2024hspi,
+  author        = {Cheng Zhang and Hanna Foerster and Robert D. Mullins and Yiren Zhao and Ilia Shumailov},
+  title         = {Hardware and Software Platform Inference},
+  journal       = {arXiv preprint arXiv:2411.05197},
+  year          = {2024},
+  eprint        = {2411.05197},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2411.05197},
+  note          = {Preprint; v2 July 2025.}
+}
+
+@article{wimbauer2026fingerprinting,
+  author        = {Anna Wimbauer and Jonas M{\"o}ller and Erik Imgrund and Konrad Rieck},
+  title         = {Fingerprinting Inference Systems of Large Language Models},
+  journal       = {arXiv preprint arXiv:2605.29979},
+  year          = {2026},
+  eprint        = {2605.29979},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CR},
+  url           = {https://arxiv.org/abs/2605.29979},
+  note          = {Preprint, May 2026.}
+}
+
+@inproceedings{gao2025equality,
+  author    = {Irena Gao and Percy Liang and Carlos Guestrin},
+  title     = {Model Equality Testing: Which Model is this {API} Serving?},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2025},
+  eprint    = {2410.20247},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2410.20247}
+}
+
+% ---------- Numerical nondeterminism and its fixes ----------
+
+@inproceedings{yuan2025nondeterminism,
+  author    = {Jiayi Yuan and Hao Li and Xinheng Ding and Wenya Xie and Yu-Jhe Li and Wentian Zhao and Kun Wan and Jing Shi and Xia Hu and Zirui Liu},
+  title     = {Understanding and Mitigating Numerical Sources of Nondeterminism in {LLM} Inference},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2025},
+  eprint    = {2506.09501},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2506.09501},
+  note      = {Oral. v1 was titled ``Give Me FP32 or Give Me Death?''}
+}
+
+@misc{he2025defeating,
+  author       = {Horace He and {Thinking Machines Lab}},
+  title        = {Defeating Nondeterminism in {LLM} Inference},
+  howpublished = {Thinking Machines Lab: Connectionism, \url{https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference}},
+  year         = {2025},
+  month        = sep,
+  note         = {Blog post, 2025-09-10, with code at \url{https://github.com/thinking-machines-lab/batch_invariant_ops}. Not peer reviewed.}
+}
+
+@article{zhang2025tbik,
+  author        = {Ziyang Zhang and Xinheng Ding and Jiayi Yuan and Rixin Liu and Huizi Mao and Jiarong Xing and Zirui Liu},
+  title         = {Deterministic Inference across Tensor Parallel Sizes That Eliminates Training-Inference Mismatch},
+  journal       = {arXiv preprint arXiv:2511.17826},
+  year          = {2025},
+  eprint        = {2511.17826},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2511.17826},
+  note          = {Preprint; v2 May 2026.}
+}
+
+@article{zhao2026corun,
+  author        = {Shiju Zhao and Jiacheng Yang and Qihang Chen and Junhao Hu and Jiaqi Zheng and Guihai Chen and Xusheng Chen},
+  title         = {{CoRun}: Padding is Simple and Efficient for Deterministic {LLM} Inference},
+  journal       = {arXiv preprint arXiv:2608.14376},
+  year          = {2026},
+  eprint        = {2608.14376},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.OS},
+  url           = {https://arxiv.org/abs/2608.14376},
+  note          = {Preprint, August 2026.}
+}
+
+@article{cooper2026accelerating,
+  author        = {Liam Cooper and Shinnung Jeong and Hyeran Jeon and Jeffrey Young and Hyesoon Kim},
+  title         = {Accelerating the Mitigation of {LLM} Inference Nondeterminism Across {GPU} Architectures},
+  journal       = {arXiv preprint arXiv:2609.25624},
+  year          = {2026},
+  eprint        = {2609.25624},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2609.25624},
+  note          = {Preprint, September 2026.}
+}
+
+@article{yang2026taming,
+  author        = {Ziteng Yang and Nicholas J. Riasanovsky and Warren Deng and Vivek Sarkar},
+  title         = {Taming Bitwise Behavior in {GPU} Kernels with Tensor Core: Black-Box Reconstruction, Compiler Enforcement, and Static Verification},
+  journal       = {arXiv preprint arXiv:2609.11356},
+  year          = {2026},
+  eprint        = {2609.11356},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.DC},
+  url           = {https://arxiv.org/abs/2609.11356},
+  note          = {Preprint, September 2026.}
+}
+
+% ---------- RL training/inference engine mismatch ----------
+
+@inproceedings{yao2025rollout,
+  author    = {Feng Yao and Liyuan Liu and Dinghuai Zhang and Chengyu Dong and Jingbo Shang and Jianfeng Gao},
+  title     = {On the Rollout-Training Mismatch in Modern {RL} Systems},
+  booktitle = {NeurIPS 2025 Workshop on Optimization for Machine Learning (OPT 2025)},
+  year      = {2025},
+  url       = {https://openreview.net/forum?id=xsonlP8DRV},
+  note      = {Workshop paper. Earlier blog version: ``Your Efficient RL Framework Secretly Brings You Off-Policy RL Training'', \url{https://fengyao.notion.site/off-policy-rl}, August 2025.}
+}
+
+@article{qi2025fp16,
+  author        = {Penghui Qi and Zichen Liu and Xiangxin Zhou and Tianyu Pang and Chao Du and Wee Sun Lee and Min Lin},
+  title         = {Defeating the Training-Inference Mismatch via {FP16}},
+  journal       = {arXiv preprint arXiv:2510.26788},
+  year          = {2025},
+  eprint        = {2510.26788},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2510.26788},
+  note          = {Preprint.}
+}
+
+% ---------- Evaluation awareness and training-vs-deployment behavior ----------
+
+@article{needham2025evaluated,
+  author        = {Joe Needham and Giles Edkins and Govind Pimpale and Henning Bartsch and Marius Hobbhahn},
+  title         = {Large Language Models Often Know When They Are Being Evaluated},
+  journal       = {arXiv preprint arXiv:2505.23836},
+  year          = {2025},
+  eprint        = {2505.23836},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2505.23836}
+}
+
+@article{nguyen2025probing,
+  author        = {Jord Nguyen and Khiem Hoang and Carlo Leonardo Attubato and Felix Hofst{\"a}tter},
+  title         = {Probing and Steering Evaluation Awareness of Language Models},
+  journal       = {arXiv preprint arXiv:2507.01786},
+  year          = {2025},
+  eprint        = {2507.01786},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2507.01786},
+  note          = {ICML 2025 Actionable Interpretability Workshop and Workshop on Technical AI Governance (posters).}
+}
+
+@article{chaudhary2025evaluation,
+  author        = {Maheep Chaudhary and Ian Su and Nikhil Hooda and Nishith Shankar and Julia Tan and Kevin Zhu and Ryan Lagasse and Vasu Sharma and Ashwinee Panda},
+  title         = {Evaluation Awareness Scales Predictably in Open-Weights Large Language Models},
+  journal       = {arXiv preprint arXiv:2509.13333},
+  year          = {2025},
+  eprint        = {2509.13333},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2509.13333},
+  note          = {Preprint.}
+}
+
+@article{hua2025steering,
+  author        = {Tim Tian Hua and Andrew Qin and Samuel Marks and Neel Nanda},
+  title         = {Steering Evaluation-Aware Language Models to Act Like They Are Deployed},
+  journal       = {arXiv preprint arXiv:2510.20487},
+  year          = {2025},
+  eprint        = {2510.20487},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2510.20487},
+  note          = {Preprint; v5 March 2026.}
+}
+
+@article{devbunova2026format,
+  author        = {Viliana Devbunova},
+  title         = {Is Evaluation Awareness Just Format Sensitivity? Limitations of Probe-Based Evidence under Controlled Prompt Structure},
+  journal       = {arXiv preprint arXiv:2603.19426},
+  year          = {2026},
+  eprint        = {2603.19426},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2603.19426},
+  note          = {ICLR 2026 Workshop ``I Can't Believe It's Not Better''.}
+}
+
+@article{heidari2026evaluation,
+  author        = {Farzaneh Heidari and Amin Memarian and Guillaume Rabusseau},
+  title         = {Evaluation Awareness in Language Models: Representation, Verbalization, and Control},
+  journal       = {arXiv preprint arXiv:2608.21766},
+  year          = {2026},
+  eprint        = {2608.21766},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2608.21766},
+  note          = {Preprint, August 2026.}
+}
+
+@article{laine2024sad,
+  author        = {Rudolf Laine and Bilal Chughtai and Jan Betley and Kaivalya Hariharan and Jeremy Scheurer and Mikita Balesni and Marius Hobbhahn and Alexander Meinke and Owain Evans},
+  title         = {Me, Myself, and {AI}: The Situational Awareness Dataset ({SAD}) for {LLMs}},
+  journal       = {arXiv preprint arXiv:2407.04694},
+  year          = {2024},
+  eprint        = {2407.04694},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2407.04694}
+}
+
+@article{greenblatt2024alignment,
+  author        = {Ryan Greenblatt and Carson Denison and Benjamin Wright and Fabien Roger and Monte MacDiarmid and Sam Marks and Johannes Treutlein and Tim Belonax and Jack Chen and David Duvenaud and Akbir Khan and Julian Michael and S{\"o}ren Mindermann and Ethan Perez and Linda Petrini and Jonathan Uesato and Jared Kaplan and Buck Shlegeris and Samuel R. Bowman and Evan Hubinger},
+  title         = {Alignment faking in large language models},
+  journal       = {arXiv preprint arXiv:2412.14093},
+  year          = {2024},
+  eprint        = {2412.14093},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2412.14093}
+}
+
+@article{hubinger2024sleeper,
+  author        = {Evan Hubinger and Carson Denison and Jesse Mu and Mike Lambert and Meg Tong and others},
+  title         = {Sleeper Agents: Training Deceptive {LLMs} that Persist Through Safety Training},
+  journal       = {arXiv preprint arXiv:2401.05566},
+  year          = {2024},
+  eprint        = {2401.05566},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2401.05566}
+}
+
+@article{carlsmith2023scheming,
+  author        = {Joe Carlsmith},
+  title         = {Scheming {AIs}: Will {AIs} fake alignment during training in order to get power?},
+  journal       = {arXiv preprint arXiv:2311.08379},
+  year          = {2023},
+  eprint        = {2311.08379},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2311.08379},
+  note          = {Report, 127 pages. Not peer reviewed.}
+}
+
+% ---------- Probes in practice ----------
+
+@article{kramar2026probes,
+  author        = {J{\'a}nos Kram{\'a}r and Joshua Engels and Zheng Wang and Bilal Chughtai and Rohin Shah and Neel Nanda and Arthur Conmy},
+  title         = {Building Production-Ready Probes For {Gemini}},
+  journal       = {arXiv preprint arXiv:2601.11516},
+  year          = {2026},
+  eprint        = {2601.11516},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2601.11516},
+  note          = {Preprint; v4 February 2026.}
+}
+
+@article{blandfort2025redteaming,
+  author        = {Phil Blandfort and Robert Graham},
+  title         = {Red-teaming Activation Probes using Prompted {LLMs}},
+  journal       = {arXiv preprint arXiv:2511.00554},
+  year          = {2025},
+  eprint        = {2511.00554},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2511.00554},
+  note          = {Preprint.}
+}
+
+@article{das2026escape,
+  author        = {Aritra Das and Jaee Ponde and Mihir More and Debayan Gupta},
+  title         = {You Can't Escape Your Own Activations: Evaluation Awareness and Multi-Agent Monitoring},
+  journal       = {arXiv preprint arXiv:2609.03035},
+  year          = {2026},
+  eprint        = {2609.03035},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.MA},
+  url           = {https://arxiv.org/abs/2609.03035},
+  note          = {Preprint, September 2026.}
+}
+
+@misc{cooney2026vllmlens,
+  author       = {Alan Cooney and Sid Black},
+  title        = {{vLLM-Lens}: Fast Interpretability Tooling That Scales to Trillion-Parameter Models},
+  howpublished = {LessWrong, \url{https://www.lesswrong.com/posts/3bs27nZQuEcKhXf7q/vllm-lens-fast-interpretability-tooling-that-scales-to}},
+  year         = {2026},
+  month        = apr,
+  note         = {Blog post, 2026-04-23. Not peer reviewed.}
+}

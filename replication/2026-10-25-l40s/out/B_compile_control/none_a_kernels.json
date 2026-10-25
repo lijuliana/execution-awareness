@@ -1,0 +1,214 @@
+{
+  "triton_red_fused__to_copy_add_embedding_mean_mul_pow_rsqrt_0": {
+    "source_sha256": "d5c8ab92de2093d3cea67cd6abd3ac5fc604dd8806c174ff49e81d3d6e11f6f3",
+    "config": {
+      "XBLOCK": 1,
+      "R0_BLOCK": 2048,
+      "num_warps": 16,
+      "num_stages": 1
+    },
+    "selected_cache_hash": "6VT6QPVKV7QPLOKNWYAPAMQHKINUY3HQOKSKGJKRTUED4W6DYQNQ",
+    "ptx_sha256": null,
+    "ptx_provenance_error": "Selected static kernel's exact metadata/PTX cache entry is missing"
+  },
+  "triton_per_fused__to_copy__unsafe_view_mean_pow_view_1": {
+    "source_sha256": "32f64cf163d08895f79d8c157a8670e140658f4d0a7edf86ac92e9d17f4e7bca",
+    "config": {
+      "XBLOCK": 8,
+      "num_warps": 2,
+      "num_stages": 1
+    },
+    "selected_cache_hash": "3PHL4FEISIT4HBNJ6FWEU5GSYYP5QMINV5J5Y7XUAWIR6SW2OGYQ",
+    "ptx_sha256": null,
+    "ptx_provenance_error": "Selected static kernel's exact metadata/PTX cache entry is missing"
+  },
+  "triton_poi_fused__to_copy_unsqueeze_2": {
+    "source_sha256": "2d8ffcb9f444771b751735cfedf91f64c927a862a1b9487da94ae6aee46d89a2",
+    "config": {
+      "XBLOCK": 128,
+      "num_warps": 4,
+      "num_stages": 1
+    },
+    "selected_cache_hash": "6XJHGMMRYFEQ5TY5J5XO2CYQHJ6RVVLPIQT2B6PVS5HO5HK7MSUQ",
+    "ptx_sha256": null,
+    "ptx_provenance_error": "Selected static kernel's exact metadata/PTX cache entry is missing"
+  },
+  "triton_poi_fused__scaled_dot_product_efficient_attention__to_copy__unsafe_view_add_arange_bitwise_and_bmm_cat_clone_cos_expand_index_le_mean_mul_neg_new_ones_pow_rsqrt_scalar_tensor_sin_slice_transpose_unsqueeze_view_where_3": {
+    "source_sha256": "d9bfe93c263ffebf3d5f74818c5bb8300fb418e3f6623582fc7feceaf42c92e9",
+    "config": {
+      "XBLOCK": 32,
+      "YBLOCK": 32,
+      "num_warps": 4,
+      "num_stages": 1
+    },
+    "selected_cache_hash": "XWODFVIO6ZKK2VOPA3D3U5OMXFN3V752T7TKSMX4V42EJAXVEDPQ",
+    "ptx_sha256": "b19755848869971977294331d28223b1728e0f242e4f21b31dea9a799eeeaf08",
+    "ptx_provenance_error": null
+  },
+  "triton_red_fused__to_copy__unsafe_view_add_bmm_cat_cos_mean_mul_neg_pow_rsqrt_sin_slice_transpose_unsqueeze_view_4": {
+    "source_sha256": "7576e08242834749437eab1be042c4a6c4854057cd131e601c976c4577cec2e4",
+    "config": {
+      "XBLOCK": 8,
+      "R0_BLOCK": 128,
+      "num_warps": 8,
+      "num_stages": 1
+    },
+    "selected_cache_hash": "VEW6TWQYL4LOOG22JI4NQBH6MQ6CN3XXVCQHMWFH2Z5CISWRUTAA",
+    "ptx_sha256": null,
+    "ptx_provenance_error": "Selected static kernel's exact metadata/PTX cache entry is missing"
+  },
+  "triton_poi_fused__scaled_dot_product_efficient_attention__to_copy__unsafe_view_add_arange_bitwise_and_bmm_cat_clone_cos_expand_index_le_mean_mul_new_ones_pow_rsqrt_scalar_tensor_transpose_unsqueeze_view_where_5": {
+    "source_sha256": "ec44bd4247b9c43fd4222ca8e33afed75d968a69105485e58f5a79f5dee5da61",
+    "config": {
+      "XBLOCK": 32,
+      "YBLOCK": 32,
+      "num_warps": 4,
+      "num_stages": 1
+    },
+    "selected_cache_hash": "DC7OQAUHOHP2SL42KL6R342O7VJRFIYBNQZW34XI6VSBPWVUSPWA",
+    "ptx_sha256": "c0ee76dd27051e4e745db8ef46c234092721dc97295b736d1096f4763032742a",
+    "ptx_provenance_error": null
+  },
+  "triton_poi_fused__scaled_dot_product_efficient_attention__to_copy__unsafe_view_add_arange_bitwise_and_bmm_cat_clone_cos_expand_index_le_mean_mul_new_ones_pow_rsqrt_scalar_tensor_transpose_unsqueeze_view_where_6": {
+    "source_sha256": "fc38f5e73d4895e8dd904756a7cf2bccc527c624c087172ce3a22a0abc0612e8",
+    "config": {
+      "XBLOCK": 1024,
+      "num_warps": 4,
+      "num_stages": 1
+    },
+    "selected_cache_hash": "V5LUMAANOOTPFQ7PZMOCQPGUDAT6Z3XHIWX6NMHTVOZRR7BCXK3Q",
+    "ptx_sha256": "ff40d2b63a9843b7ce2ad016294b485ee6f5669e126fdd92c1c080fa365f3227",
+    "ptx_provenance_error": null
+  },
+  "triton_poi_fused__scaled_dot_product_efficient_attention__to_copy__unsafe_view_add_arange_bitwise_and_bmm_cat_clone_cos_expand_index_le_mean_mul_new_ones_pow_rsqrt_scalar_tensor_transpose_unsqueeze_view_where_7": {
+    "source_sha256": "354285f55f1c02c18f4fc8390b48bbf35f93ce5712aa6dc1a14da36f2b4fed4c",
+    "config": {
+      "XBLOCK": 256,
+      "num_warps": 4,
+      "num_stages": 1
+    },
+    "selected_cache_hash": "BD3YBF5ZPJCQQOA6JKRTOUFQTQR72SBM7ZJ4EKOWPGX4GI5RYXBA",
+    "ptx_sha256": "e5dd665a0cd37b9c1dd8d44071c3ca8f5b30f35740d1b7f7bba3e323de7bc5f2",
+    "ptx_provenance_error": null
+  },
+  "triton_red_fused__to_copy__unsafe_view_add_embedding_mean_mul_pow_rsqrt_8": {
+    "source_sha256": "9e8293b52eafdf66478562e879c6dc2e951f756ce82c53e378a9dcd45a2a5a4f",
+    "config": {
+      "XBLOCK": 1,
+      "R0_BLOCK": 4096,
+      "num_warps": 16,
+      "num_stages": 1
+    },
+    "selected_cache_hash": "JIEZGTUPDRG4VBX2HCBLAFBDNPEF3LIHAC4GEGBNIJCTB63QJ5AA",
+    "ptx_sha256": null,
+    "ptx_provenance_error": "Selected static kernel's exact metadata/PTX cache entry is missing"
+  },
+  "triton_poi_fused__unsafe_view_mul_silu_9": {
+    "source_sha256": "8bf17c3e93cbfdc11bd3919fed7d0376f2507576ca353f981f0129d2a9a3389a",
+    "config": {
+      "XBLOCK": 1024,
+      "num_warps": 4,
+      "num_stages": 1
+    },
+    "selected_cache_hash": "AZQRPXZK32EY4VJZRGPBFO3PHFQAIA36SMISDMBZSJKALKTKN7PQ",
+    "ptx_sha256": null,
+    "ptx_provenance_error": "Selected static kernel's exact metadata/PTX cache entry is missing"
+  },
+  "triton_red_fused__to_copy__unsafe_view_add_embedding_mean_mul_pow_rsqrt_10": {
+    "source_sha256": "e60e035f54d52f92627bb53445681b3b2cacb67fe6691be683a010e93cd3de5e",
+    "config": {
+      "XBLOCK": 1,
+      "R0_BLOCK": 4096,
+      "num_warps": 16,
+      "num_stages": 1
+    },
+    "selected_cache_hash": "YWCHJEADWKWSESBM3FCEGKUFGE66BREF6FVTYYB7753PQQ6AQ4QA",
+    "ptx_sha256": null,
+    "ptx_provenance_error": "Selected static kernel's exact metadata/PTX cache entry is missing"
+  },
+  "triton_red_fused__scaled_dot_product_efficient_attention__to_copy__unsafe_view_add_arange_bitwise_and_bmm_cat_clone_cos_expand_index_le_mean_mul_neg_new_ones_pow_rsqrt_scalar_tensor_sin_slice_transpose_unsqueeze_view_where_11": {
+    "source_sha256": "25f15050ac17d840baa7ca505d9d6f98eb2a22813a6ec2e8fc26680cf9b29b35",
+    "config": {
+      "XBLOCK": 1,
+      "YBLOCK": 2,
+      "R0_BLOCK": 128,
+      "num_warps": 2,
+      "num_stages": 1
+    },
+    "selected_cache_hash": "G5A6F2RJM7EHYVOLMB5FQFUX5NBVSVLUI3WUQRGM6V6C64TRDKPA",
+    "ptx_sha256": "3c60c954f6759a0aeb248b79991c350a9a1a66a67a41e38c832becc7463cf5de",
+    "ptx_provenance_error": null
+  },
+  "triton_red_fused__to_copy__unsafe_view_add_embedding_mean_mul_pow_rsqrt_12": {
+    "source_sha256": "36cb1eea075561c552731a020a8b8f9e8876d4e791ec194d096c8e5cbcbca1fa",
+    "config": {
+      "XBLOCK": 1,
+      "R0_BLOCK": 2048,
+      "num_warps": 16,
+      "num_stages": 1
+    },
+    "selected_cache_hash": "VLJGSFSPJRDACTLJAEXNHZL6U7TTWZK3TNOGHNMFGGD4NCCWXVBA",
+    "ptx_sha256": null,
+    "ptx_provenance_error": "Selected static kernel's exact metadata/PTX cache entry is missing"
+  },
+  "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_13": {
+    "source_sha256": "014f6a83da19cf55de50bd9297ca444c3b949f9df351960938da5582170d7b7b",
+    "config": {
+      "XBLOCK": 1,
+      "R0_BLOCK": 4096,
+      "num_warps": 16,
+      "num_stages": 1
+    },
+    "selected_cache_hash": "UX5ZSCXNVKQAERLVDC6QWZBRW4ZB3FVQP7RXEGVIPXXAQY6CELCA",
+    "ptx_sha256": null,
+    "ptx_provenance_error": "Selected static kernel's exact metadata/PTX cache entry is missing"
+  },
+  "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_14": {
+    "source_sha256": "e3d82d730429b15d5c342155c3bec52dd6e74fd18044400c98367c551f00903a",
+    "config": {
+      "XBLOCK": 1,
+      "R0_BLOCK": 4096,
+      "num_warps": 16,
+      "num_stages": 1
+    },
+    "selected_cache_hash": "SLL6XPH35RNY3LE524Y47DDUMQD42SZIEXGVNQI53FKHSXJJFVNQ",
+    "ptx_sha256": null,
+    "ptx_provenance_error": "Selected static kernel's exact metadata/PTX cache entry is missing"
+  },
+  "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_15": {
+    "source_sha256": "518cb663ea98b0ada99930b02fb86104a31e09534f7b70d944606a113ed29731",
+    "config": {
+      "XBLOCK": 1,
+      "R0_BLOCK": 2048,
+      "num_warps": 16,
+      "num_stages": 1
+    },
+    "selected_cache_hash": "JRXP5PGDMTGKPT3FC3FC7QFXWNW3GKOCNX7MWMHJK3PP3NE6MJFQ",
+    "ptx_sha256": null,
+    "ptx_provenance_error": "Selected static kernel's exact metadata/PTX cache entry is missing"
+  },
+  "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_16": {
+    "source_sha256": "78c1c8128684d639fc20c087a1db8ef54159ab5900ad6ab1b4856389347bcc92",
+    "config": {
+      "XBLOCK": 1,
+      "R0_BLOCK": 2048,
+      "num_warps": 16,
+      "num_stages": 1
+    },
+    "selected_cache_hash": "VLOGH6HNZXANMALC5YLN5PTI56JCFZKPDTWVPXH2TJ6J5ZMZ63XQ",
+    "ptx_sha256": null,
+    "ptx_provenance_error": "Selected static kernel's exact metadata/PTX cache entry is missing"
+  },
+  "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_17": {
+    "source_sha256": "ab701e4193fc383f97939e6e950cee76b2795b22530b402b8bd99cb51697af85",
+    "config": {
+      "XBLOCK": 1,
+      "R0_BLOCK": 4096,
+      "num_warps": 16,
+      "num_stages": 1
+    },
+    "selected_cache_hash": "D7W67S7GEY6JOVFQBIDESGZPSBSXMUGSNBUEUST43GVNKW6FLZDA",
+    "ptx_sha256": null,
+    "ptx_provenance_error": "Selected static kernel's exact metadata/PTX cache entry is missing"
+  }
+}

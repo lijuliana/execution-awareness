@@ -1,0 +1,15 @@
+[2026-10-25T04:14:31Z] stage 0: environment
+[2026-10-25T04:14:55Z] stage 0b: model and artifact downloads
+[2026-10-25T04:18:10Z] stage A: released 034 detector, fresh process, whole model compiled, 64 held-out prompts, probe on/off
+[2026-10-25T04:21:16Z] stage A exit 0
+[2026-10-25T04:21:16Z] stage B: compile-to-compile control (run 048 procedure), unprobed model compiled independently
+[2026-10-25T04:24:24Z] stage B exit 0
+[2026-10-25T04:24:24Z] stage C: retrain the 034 recipe from original weights (256 prompts, 1024 updates, 8 pairs, lr 5e-6, seed 20261017)
+[2026-10-25T04:36:50Z] stage C exit 0
+[2026-10-25T04:36:50Z] stage D: identical-input null on the retrain's cached states (must stay at chance)
+[2026-10-25T04:44:34Z] stage D exit 0
+[2026-10-25T04:44:34Z] stage E: the retrained tail in a fresh process on the 64 held-out validation_v2 prompts
+[2026-10-25T04:47:18Z] stage E exit 1
+[2026-10-25T04:47:18Z] stage F: package results (tensors excluded)
+-rw-rw-r-- 1 ubuntu ubuntu 2125563 Oct 25 04:47 results.tgz
+[2026-10-25T04:47:19Z] ALL DONE

@@ -1,0 +1,1 @@
+Linux ip-172-31-26-25 6.8.0-1052-aws #55~22.04.1-Ubuntu SMP Tue Apr  7 04:58:22 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux

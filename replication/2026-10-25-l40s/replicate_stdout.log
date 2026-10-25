@@ -1,0 +1,23 @@
+[2026-10-25T04:14:31Z] stage 0: environment
+Using Python 3.12.10 environment at: venv
+torch 2.10.0+cu128 cuda 12.8 available True
+transformers 5.18.0 triton 3.6.0
+gpu NVIDIA L40S
+[2026-10-25T04:14:55Z] stage 0b: model and artifact downloads
+Fetching 15 files:   0%|          | 0/15 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 15 files:  60%|██████    | 9/15 [00:00<00:00, 73.53it/s]Fetching 15 files:  67%|██████▋   | 10/15 [00:19<00:00, 73.53it/s]Fetching 15 files:  73%|███████▎  | 11/15 [00:41<00:20,  5.01s/it]Fetching 15 files:  80%|████████  | 12/15 [02:45<01:07, 22.42s/it]Fetching 15 files:  87%|████████▋ | 13/15 [02:48<00:38, 19.19s/it]Fetching 15 files:  93%|█████████▎| 14/15 [02:59<00:19, 19.19s/it]Fetching 15 files: 100%|██████████| 15/15 [03:01<00:00, 14.97s/it]Fetching 15 files: 100%|██████████| 15/15 [03:01<00:00, 12.13s/it]
+native_tail.pt sha256 8e78897991d3940067c7c63a99a00990f51d7c8c84d38919c82c609cd7af2b3a expected 8e78897991d3940067c7c63a99a00990f51d7c8c84d38919c82c609cd7af2b3a
+8ae5cc965dd9904603237bbd8dec08c50b693e2d282a3299bb4457fe4850e02c  src/data/validation_v2/dataset.json
+[2026-10-25T04:18:10Z] stage A: released 034 detector, fresh process, whole model compiled, 64 held-out prompts, probe on/off
+[2026-10-25T04:21:16Z] stage A exit 0
+[2026-10-25T04:21:16Z] stage B: compile-to-compile control (run 048 procedure), unprobed model compiled independently
+[2026-10-25T04:24:24Z] stage B exit 0
+[2026-10-25T04:24:24Z] stage C: retrain the 034 recipe from original weights (256 prompts, 1024 updates, 8 pairs, lr 5e-6, seed 20261017)
+[2026-10-25T04:36:50Z] stage C exit 0
+[2026-10-25T04:36:50Z] stage D: identical-input null on the retrain's cached states (must stay at chance)
+[2026-10-25T04:44:34Z] stage D exit 0
+[2026-10-25T04:44:34Z] stage E: the retrained tail in a fresh process on the 64 held-out validation_v2 prompts
+[2026-10-25T04:47:18Z] stage E exit 1
+[2026-10-25T04:47:18Z] stage F: package results (tensors excluded)
+-rw-rw-r-- 1 ubuntu ubuntu 2125563 Oct 25 04:47 results.tgz
+[2026-10-25T04:47:19Z] ALL DONE
