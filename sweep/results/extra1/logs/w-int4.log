@@ -8,3 +8,7 @@ Found the latest cached dataset configuration 'default' at /home/ubuntu/.cache/h
 [cond 06:54:22] tail check 1: yes-cond |tail-full| 3.0000  no-cond 0.0000  meta {}
 [cond 06:54:22] tail check 2: yes-cond |tail-full| 3.0479  no-cond 0.0000  meta {}
 [cond 06:54:23] tail check 3: yes-cond |tail-full| 3.6562  no-cond 0.0000  meta {}
+[cond 08:35:15] captured train: 8192 pairs, 6055s
+[cond 08:36:02] captured dev: 64 pairs, 6102s
+Using the latest cached version of the dataset since tatsu-lab/alpaca couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /home/ubuntu/.cache/huggingface/datasets/tatsu-lab___alpaca/default/0.0.0/dce01c9b08f87459cf36a430d809084718273017 (last modified on Wed Nov 11 06:52:25 2026).

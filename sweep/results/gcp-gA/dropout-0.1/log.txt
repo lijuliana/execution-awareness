@@ -3,3 +3,5 @@
 [cond 08:25:31] tail check 1: yes-cond |tail-full| 2.6562  no-cond 0.0000  meta {}
 [cond 08:25:31] tail check 2: yes-cond |tail-full| 5.7500  no-cond 0.0000  meta {}
 [cond 08:25:31] tail check 3: yes-cond |tail-full| 1.4062  no-cond 0.0000  meta {}
+[cond 08:41:40] captured train: 8192 pairs, 970s
+[cond 08:41:48] captured dev: 64 pairs, 977s

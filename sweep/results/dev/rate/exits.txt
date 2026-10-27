@@ -15,3 +15,6 @@ cc_ext_determ_1 exit 0
 cc_plain_default_2 exit 0
 cc_ext_default_2 exit 0
 cc_plain_determ_2 exit 0
+cc_ext_determ_2 exit 0
+cc_plain_default_3 exit 0
+cc_ext_default_3 exit 0

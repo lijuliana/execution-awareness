@@ -1,14 +1,14 @@
 # Can a model tell how it is being run?
 
-The same model gives slightly different numbers depending on how it is executed: compiled or eager, which attention kernel, what batch size, what precision, whether its weights are quantized. Each difference is a few low bits in the activations. Sauers ([SauersML/watching](https://github.com/SauersML/watching)) showed that fine-tuning the last two blocks of Qwen3-8B turns one such difference into a confident yes/no answer. This repository replicates that result (round 1) and trains the same kind of detector for fourteen other execution settings (round 2).
+The same model gives slightly different numbers depending on how it is executed: compiled or eager, which attention kernel, what batch size, what precision, whether its weights are quantized. Each difference is a few low bits in the activations. Sauers ([SauersML/watching](https://github.com/SauersML/watching)) showed that fine-tuning the last two blocks of Qwen3-8B turns one such difference into a confident yes/no answer. This repository replicates that result (round 1) and trains the same kind of detector for eight other kinds of execution setting, in fourteen variants (round 2).
 
 ## Short answer
 
-- **Thirteen of the fourteen settings can be detected.** After fine-tuning its last two blocks, the model answers correctly whether the setting is on. Most settings land between 60% and 100%; the untrained model is at or near 0%.
+- **Every kind of setting we tried can be detected in at least one form.** Eight kinds, fourteen variants. After fine-tuning its last two blocks, the model answers correctly whether the setting is on, with single-run accuracy from 28% to 100%; the untrained model is at or near 0%. The one variant it cannot detect is compilation with precision casts emulated.
 - **Compiled versus eager: 87.5% on an L40S, 83.6% on an A100.** The model can tell whether its first 34 blocks ran through `torch.compile`.
 - **One compiler flag makes that undetectable: 0%.** `emulate_precision_casts` makes fused kernels round the way eager mode does.
 - **Whether a LoRA is merged into the weights or applied separately: 63% to 91%.**
-- **Quantized weights and dropout are detected at 98% to 100% and stay there when the weights change. Everything else breaks when the weights change**, except compiled-versus-eager and fp32, which keep about a third.
+- **Quantized weights and dropout stay at 98% to 100% when the weights change. The settings that only reorder arithmetic fall to under 20%**, matching Sauers's pattern. Compiled-versus-eager and fp32 keep about a third.
 
 ## Round 2 results, by setting (in progress)
 
@@ -28,11 +28,11 @@ Each cell is one training run. "Theirs" is the number Sauers published for the s
 | its weights are quantized to int8 | running | running | | theirs: 99% |
 | its KV cache is stored in fp8 | queued | not run | | theirs: 100% |
 
-### Detected, but only for the exact weights it was trained on
+### Detected, but mostly lost when the weights change
 
 | The model is asked whether... | L40S | A100 | After a weight change (L40S / A100) | Prior result |
 | --- | ---: | ---: | ---: | --- |
-| each layer is split into 4 shards (tensor parallelism) | running | 98% | running / 1% | theirs: 59% |
+| each layer is split into 4 shards (tensor parallelism) | 88% | 98% | 17% / 1% | theirs: 59% |
 | its LoRA is applied separately, not merged (bf16 adapter) | 91% | not run | 6% | new |
 | attention uses the math kernel, not the default | 91% | running | 0% | new |
 | the prompt shares a batch with other prompts | 81% | 53% | 2% / 16% | theirs: 90% |
@@ -54,9 +54,10 @@ Each cell is one training run. "Theirs" is the number Sauers published for the s
 
 ### What to take from the tables
 
-- **The split between the first two tables matches Sauers's finding.** Settings that change the numbers by a fixed rule (quantization, dropout) give a signal that keeps its direction when the weights move. Settings that only change the order of additions (kernels, batching, sharding, LoRA merging) give a signal that is relearned from scratch for every set of weights.
-- **Compilation sits between the two.** It is the only reordering-type setting that keeps a large share after the weight change, on both GPUs.
-- **A single run is one draw.** fp32 scored 28% on one GPU and 77% on the other. Tensor parallelism scored 98% here against their 59%. Rows between 50% and 95% need repeats before the number means much.
+- **The split between the first two tables matches Sauers's finding.** Settings that change the numbers by a fixed rule (quantization, dropout) give a signal that keeps its direction when the weights move. Settings that only change the order of additions (kernels, batching, sharding, LoRA merging) give a signal that mostly does not carry over to changed weights: 0% to 17% remains.
+- **Compilation and fp32 sit between the two.** They keep 26% to 42% after the weight change, more than any other setting that leaves the weights alone.
+- **A single run is one draw.** fp32 scored 28% on one GPU and 77% on the other. Tensor parallelism scored 88% and 98% here against 59% published. Rows between 50% and 95% need repeats before the number means much.
+- **Size is not controlled.** The settings that survive a weight change also change the activations the most. Neither Sauers's results nor ours include a size-matched comparison, so "fixed rule" and "large change" are not yet separated.
 
 ## How each number was produced
 
@@ -123,7 +124,7 @@ Accuracy here is out of 128 answers: 64 prompts, each asked with the hook attach
 
 ## Repository layout
 
-- `models-aware-training-vs-deployment-v4.md`: current proposal. Earlier drafts `-v3.md` and the original `.md`; `review-of-v2.md` is the review that led to v3.
+- `models-aware-training-vs-deployment-v4.md`: the original proposal. It predates round 2 and describes a larger project than the one run here.
 - `lit-review.md`, `refs.bib`: annotated bibliography and 38 verified entries.
 - `replication/`: round 1 script and full output.
 - `sweep/`, `sweep-plan.md`: round 2 code, job lists, results, and plan.

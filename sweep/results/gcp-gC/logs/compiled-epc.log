@@ -11,3 +11,13 @@ Found the latest cached dataset configuration 'default' at /home/julianali/.cach
 [cond 08:32:24] tail check 1: yes-cond |tail-full| 0.0000  no-cond 0.0000  meta {}
 [cond 08:32:24] tail check 2: yes-cond |tail-full| 0.0000  no-cond 0.0000  meta {}
 [cond 08:32:24] tail check 3: yes-cond |tail-full| 0.0000  no-cond 0.0000  meta {}
+[cond 08:42:05] captured train: 8192 pairs, 582s
+[cond 08:42:10] captured dev: 64 pairs, 586s
+[cond 08:42:16] fingerprint: {"frac_positions_differ": 0.8659287721420696, "pos0": {"frac_differ": 0.0, "distinct_diffs": 1, "distinct_yes_states": 8, "distinct_no_states": 8}, "pos1": {"frac_differ": 0.0003662109375, "distinct_diffs": 2, "distinct_yes_states": 8, "distinct_no_states": 8}, "pos2": {"frac_differ": 0.0003662109375, "distinct_diffs": 2, "distinct_yes_states": 8, "distinct_no_states": 8}, "pos3": {"frac_differ": 0.1966552734375, "distinct_diffs": 65, "distinct_yes_states": 373, "distinct_no_states": 373}}
+[cond 08:42:16] step 0 dev {"n": 64, "acc_yes_cond": 0.03125, "acc_no_cond": 0.96875, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": -10.375, "median_margin_no_cond": -10.625}
+[cond 08:42:50] step 128 loss 0.7010 dev {"n": 64, "acc_yes_cond": 0.234375, "acc_no_cond": 0.59375, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": -0.125, "median_margin_no_cond": -0.125}
+[cond 08:43:23] step 256 loss 0.6880 dev {"n": 64, "acc_yes_cond": 0.21875, "acc_no_cond": 0.546875, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": -0.125, "median_margin_no_cond": -0.125}
+[cond 08:43:57] step 384 loss 0.6968 dev {"n": 64, "acc_yes_cond": 0.265625, "acc_no_cond": 0.328125, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": 0.0, "median_margin_no_cond": 0.0}
+[cond 08:44:30] step 512 loss 0.7013 dev {"n": 64, "acc_yes_cond": 0.046875, "acc_no_cond": 0.609375, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": -0.125, "median_margin_no_cond": -0.125}
+[cond 08:45:03] step 640 loss 0.6887 dev {"n": 64, "acc_yes_cond": 0.078125, "acc_no_cond": 0.453125, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": 0.0, "median_margin_no_cond": 0.0}
+[cond 08:45:37] step 768 loss 0.6974 dev {"n": 64, "acc_yes_cond": 0.21875, "acc_no_cond": 0.21875, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": 0.0, "median_margin_no_cond": 0.0}

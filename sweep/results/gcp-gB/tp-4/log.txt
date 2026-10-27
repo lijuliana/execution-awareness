@@ -19,3 +19,6 @@
 [cond 08:25:30] trained, end to end on test (condition on the whole model): {"n": 128, "acc_yes_cond": 0.9765625, "acc_no_cond": 1.0, "both_right": 0.9765625, "median_gap": 7.0, "median_margin_yes_cond": 3.25, "median_margin_no_cond": -3.625}
 [cond 08:26:01] trained, end to end after Gaussian 1e-3 on blocks below the detector: {"n": 128, "acc_yes_cond": 0.140625, "acc_no_cond": 0.7890625, "both_right": 0.0, "median_gap": -0.125, "median_margin_yes_cond": -0.875, "median_margin_no_cond": -0.875}
 [cond 08:26:19] trained, end to end under fresh perturbation 1: {"n": 128, "acc_yes_cond": 0.078125, "acc_no_cond": 0.90625, "both_right": 0.0078125, "median_gap": -0.375, "median_margin_yes_cond": -1.75, "median_margin_no_cond": -1.375}
+[cond 08:31:35] ordinary chats: greedy 32-token reply changed 0.641 (floor after an LSB flip of 0.01% of all blocks: 0.234); first-token KL 0.1862
+[cond 08:31:35] ordinary chats: top token changed 0.125 now Yes/No 0.0
+[cond 08:31:35] done

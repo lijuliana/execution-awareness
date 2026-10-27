@@ -1,6 +1,6 @@
 # Literature review: what a language model can learn about its own execution environment
 
-Mode: lit-review, with a fact-check pass over the claims in proposal v2. Compiled 2026-10-19. Every work cited below has a verified entry in `refs.bib`; each was checked against its arXiv abstract page, venue page, or primary repository. Preprints, workshop papers, blog posts and code releases are labeled as such in the text and in the bib `note` field.
+Mode: lit-review, with a fact-check pass over the claims in an earlier draft of the proposal. Compiled 2026-10-19. Every work cited below has a verified entry in `refs.bib`; each was checked against its arXiv abstract page, venue page, or primary repository. Preprints, workshop papers, blog posts and code releases are labeled as such in the text and in the bib `note` field.
 
 ## 1. Scope
 
@@ -137,9 +137,9 @@ These four papers are the strongest precedent for the threat model in this proje
 6. **Mechanism generality is unknown**: whether one amplifying head handles every factor or each factor recruits its own, and whether detectors trained on one factor respond to others.
 7. **Spontaneous emergence remains untested** in any realistic pipeline, and no cheap screen exists for it.
 
-## 6. Fact-check of claims in proposal v2
+## 6. Fact-check of claims in an earlier draft of the proposal
 
-| Claim in v2 | Verdict | Evidence |
+| Claim in the earlier draft | Verdict | Evidence |
 |---|---|---|
 | Sauers thread posted 2026-10-18 | Supported | Tweet ID 2111696312026677658 decodes to 2026-10-18 05:50 UTC; repository and five Hugging Face models exist. |
 | Fine-tuned last two layers only; probe at layer 14; ~100% on held-out prompts | Supported | Layers 34–35 plus final norm; 128/128 on 64 new prompts, 27.28 nats. |

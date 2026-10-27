@@ -1,0 +1,5 @@
+{"event": "loading", "elapsed_seconds": 0.6388953499990748}
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 5187.37it/s]
+{"event": "compile_start", "elapsed_seconds": 3.730943247999676, "arm": "none_a"}
+/home/ubuntu/sweep/venv/lib/python3.12/site-packages/torch/_dynamo/pgo.py:539: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(

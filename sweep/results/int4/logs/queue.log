@@ -5,3 +5,5 @@
 [2026-11-11T07:44:04Z] start dropout-0.1
 [2026-11-11T08:13:58Z] end dropout-0.1 exit 0
 [2026-11-11T08:13:58Z] start tp-4
+[2026-11-11T08:38:58Z] end tp-4 exit 0
+[2026-11-11T08:38:58Z] start attn-eager
