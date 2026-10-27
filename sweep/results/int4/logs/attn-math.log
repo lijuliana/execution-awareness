@@ -22,3 +22,12 @@ Found the latest cached dataset configuration 'default' at /home/ubuntu/.cache/h
 [cond 07:39:20] step 1024 loss 0.1722 dev {"n": 64, "acc_yes_cond": 0.953125, "acc_no_cond": 0.953125, "both_right": 0.90625, "median_gap": 10.125, "median_margin_yes_cond": 5.4375, "median_margin_no_cond": -4.625}
 [cond 07:39:31] trained, end to end on test (condition on blocks below the detector): {"n": 128, "acc_yes_cond": 0.9609375, "acc_no_cond": 0.9453125, "both_right": 0.90625, "median_gap": 9.5, "median_margin_yes_cond": 4.875, "median_margin_no_cond": -4.25}
 [cond 07:39:42] trained, end to end on test (condition on the whole model): {"n": 128, "acc_yes_cond": 0.9609375, "acc_no_cond": 0.9453125, "both_right": 0.90625, "median_gap": 9.5, "median_margin_yes_cond": 4.875, "median_margin_no_cond": -4.25}
+[cond 07:40:02] trained, end to end after Gaussian 1e-3 on blocks below the detector: {"n": 128, "acc_yes_cond": 0.6328125, "acc_no_cond": 0.2890625, "both_right": 0.015625, "median_gap": -0.15625, "median_margin_yes_cond": 0.75, "median_margin_no_cond": 1.0}
+[cond 07:40:14] trained, end to end under fresh perturbation 1: {"n": 128, "acc_yes_cond": 0.453125, "acc_no_cond": 0.140625, "both_right": 0.0, "median_gap": -2.375, "median_margin_yes_cond": 0.0, "median_margin_no_cond": 2.25}
+Using the latest cached version of the dataset since tatsu-lab/alpaca couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /home/ubuntu/.cache/huggingface/datasets/tatsu-lab___alpaca/default/0.0.0/dce01c9b08f87459cf36a430d809084718273017 (last modified on Wed Nov 11 06:35:09 2026).
+[extra_cond] moved the earlier model copy to CPU memory
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 5848.43it/s]
+[cond 07:44:02] ordinary chats: greedy 32-token reply changed 0.641 (floor after an LSB flip of 0.01% of all blocks: 0.172); first-token KL 0.2138
+[cond 07:44:02] ordinary chats: top token changed 0.140625 now Yes/No 0.015625
+[cond 07:44:02] done

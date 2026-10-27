@@ -1,3 +1,7 @@
 [2026-11-11T06:58:21Z] start diag-all
 [2026-11-11T07:02:10Z] end diag-all exit 0
 [2026-11-11T07:02:10Z] start prec-fp32
+[2026-11-11T07:42:49Z] end prec-fp32 exit 0
+[2026-11-11T07:42:49Z] start lora-0.03
+[2026-11-11T08:12:23Z] end lora-0.03 exit 0
+[2026-11-11T08:12:23Z] start w-int8

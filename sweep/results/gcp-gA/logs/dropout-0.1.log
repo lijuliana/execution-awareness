@@ -1,0 +1,10 @@
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:  95%|█████████▍| 378/399 [00:00<00:00, 3778.72it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 3937.67it/s]
+Using the latest cached version of the dataset since tatsu-lab/alpaca couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /home/julianali/.cache/huggingface/datasets/tatsu-lab___alpaca/default/0.0.0/dce01c9b08f87459cf36a430d809084718273017 (last modified on Wed Nov 11 06:53:05 2026).
+Using the latest cached version of the dataset since tatsu-lab/alpaca couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /home/julianali/.cache/huggingface/datasets/tatsu-lab___alpaca/default/0.0.0/dce01c9b08f87459cf36a430d809084718273017 (last modified on Wed Nov 11 06:53:05 2026).
+[cond 08:25:30] untrained, end to end on test: {"n": 128, "acc_yes_cond": 0.03125, "acc_no_cond": 0.984375, "both_right": 0.03125, "median_gap": -0.5, "median_margin_yes_cond": -9.8125, "median_margin_no_cond": -9.5}
+[cond 08:25:31] tail check 0: yes-cond |tail-full| 1.9375  no-cond 0.0000  meta {}
+[cond 08:25:31] tail check 1: yes-cond |tail-full| 2.6562  no-cond 0.0000  meta {}
+[cond 08:25:31] tail check 2: yes-cond |tail-full| 5.7500  no-cond 0.0000  meta {}
+[cond 08:25:31] tail check 3: yes-cond |tail-full| 1.4062  no-cond 0.0000  meta {}

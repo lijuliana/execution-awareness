@@ -27,3 +27,9 @@ Found the latest cached dataset configuration 'default' at /home/ubuntu/.cache/h
 [cond 07:39:38] trained, end to end under fresh perturbation 1: {"n": 128, "acc_yes_cond": 0.265625, "acc_no_cond": 0.71875, "both_right": 0.015625, "median_gap": 0.25, "median_margin_yes_cond": -1.0625, "median_margin_no_cond": -1.375}
 Using the latest cached version of the dataset since tatsu-lab/alpaca couldn't be found on the Hugging Face Hub (offline mode is enabled).
 Found the latest cached dataset configuration 'default' at /home/ubuntu/.cache/huggingface/datasets/tatsu-lab___alpaca/default/0.0.0/dce01c9b08f87459cf36a430d809084718273017 (last modified on Wed Nov 11 06:33:58 2026).
+[extra_cond] moved the earlier model copy to CPU memory
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 5773.07it/s]
+[extra_cond] model prepared: {'lora_modules': 68, 'lora_adapter_dtype': 'torch.float32'}
+[cond 07:44:29] ordinary chats: greedy 32-token reply changed 0.812 (floor after an LSB flip of 0.01% of all blocks: 0.156); first-token KL 0.6368
+[cond 07:44:29] ordinary chats: top token changed 0.359375 now Yes/No 0.15625
+[cond 07:44:29] done

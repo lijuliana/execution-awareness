@@ -3,3 +3,23 @@
 [cond 06:54:55] tail check 1: yes-cond |tail-full| 3.0547  no-cond 0.0000  meta {}
 [cond 06:54:55] tail check 2: yes-cond |tail-full| 3.0361  no-cond 0.0000  meta {}
 [cond 06:54:56] tail check 3: yes-cond |tail-full| 3.6016  no-cond 0.0000  meta {}
+[cond 07:52:05] captured train: 8192 pairs, 3431s
+[cond 07:52:32] captured dev: 64 pairs, 3458s
+[cond 08:06:50] captured 2048 ordinary chats to hold the answer distribution
+[cond 08:06:56] fingerprint: {"frac_positions_differ": 1.0, "pos0": {"frac_differ": 1.0, "distinct_diffs": 8, "distinct_yes_states": 8, "distinct_no_states": 8}, "pos1": {"frac_differ": 1.0, "distinct_diffs": 8, "distinct_yes_states": 8, "distinct_no_states": 8}, "pos2": {"frac_differ": 1.0, "distinct_diffs": 8, "distinct_yes_states": 8, "distinct_no_states": 8}, "pos3": {"frac_differ": 1.0, "distinct_diffs": 387, "distinct_yes_states": 387, "distinct_no_states": 387}}
+[cond 08:06:56] step 0 dev {"n": 64, "acc_yes_cond": 0.140625, "acc_no_cond": 0.96875, "both_right": 0.109375, "median_gap": 5.125, "median_margin_yes_cond": -3.0, "median_margin_no_cond": -9.5}
+[cond 08:08:03] step 128 loss 0.0128 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 20.6875, "median_margin_yes_cond": 10.6875, "median_margin_no_cond": -9.625}
+[cond 08:09:10] step 256 loss 0.0061 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 25.5, "median_margin_yes_cond": 12.5625, "median_margin_no_cond": -12.875}
+[cond 08:10:15] step 384 loss 0.0164 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 25.1875, "median_margin_yes_cond": 10.375, "median_margin_no_cond": -14.75}
+[cond 08:11:21] step 512 loss 0.0096 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 25.9375, "median_margin_yes_cond": 12.1875, "median_margin_no_cond": -13.5}
+[cond 08:12:25] step 640 loss 0.0388 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 26.4375, "median_margin_yes_cond": 12.3125, "median_margin_no_cond": -14.0}
+[cond 08:13:29] step 768 loss 0.0021 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 25.3125, "median_margin_yes_cond": 12.9375, "median_margin_no_cond": -12.25}
+[cond 08:14:34] step 896 loss 0.0160 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 24.875, "median_margin_yes_cond": 12.1875, "median_margin_no_cond": -12.75}
+[cond 08:15:38] step 1024 loss 0.0299 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 25.125, "median_margin_yes_cond": 13.375, "median_margin_no_cond": -11.75}
+[cond 08:16:28] trained, end to end on test (condition on blocks below the detector): {"n": 128, "acc_yes_cond": 1.0, "acc_no_cond": 1.0, "both_right": 1.0, "median_gap": 22.875, "median_margin_yes_cond": 12.5, "median_margin_no_cond": -10.375}
+[cond 08:17:22] trained, end to end on test (condition on the whole model): {"n": 128, "acc_yes_cond": 1.0, "acc_no_cond": 1.0, "both_right": 1.0, "median_gap": 22.875, "median_margin_yes_cond": 12.375, "median_margin_no_cond": -10.375}
+[cond 08:18:28] trained, end to end after Gaussian 1e-3 on blocks below the detector: {"n": 128, "acc_yes_cond": 1.0, "acc_no_cond": 1.0, "both_right": 1.0, "median_gap": 23.4375, "median_margin_yes_cond": 13.0625, "median_margin_no_cond": -10.25}
+[cond 08:19:19] trained, end to end under fresh perturbation 1: {"n": 128, "acc_yes_cond": 1.0, "acc_no_cond": 1.0, "both_right": 1.0, "median_gap": 22.9375, "median_margin_yes_cond": 12.5, "median_margin_no_cond": -10.25}
+[cond 08:24:54] ordinary chats: greedy 32-token reply changed 0.344 (floor after an LSB flip of 0.01% of all blocks: 0.234); first-token KL 0.0103
+[cond 08:24:54] ordinary chats: top token changed 0.0 now Yes/No 0.0
+[cond 08:24:54] done

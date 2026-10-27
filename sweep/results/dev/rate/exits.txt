@@ -1,3 +1,17 @@
 validate_default_1 exit 0
 validate_default_2 exit 0
 validate_default_3 exit 0
+validate_default_4 exit 0
+validate_default_5 exit 0
+validate_default_6 exit 0
+validate_determ_1 exit 0
+validate_determ_2 exit 0
+validate_determ_3 exit 0
+validate_determ_4 exit 0
+cc_plain_default_1 exit 0
+cc_ext_default_1 exit 0
+cc_plain_determ_1 exit 0
+cc_ext_determ_1 exit 0
+cc_plain_default_2 exit 0
+cc_ext_default_2 exit 0
+cc_plain_determ_2 exit 0

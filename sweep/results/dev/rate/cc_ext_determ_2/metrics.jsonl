@@ -1,0 +1,10 @@
+{"event": "loading", "elapsed_seconds": 0.6348482279991003}
+{"event": "eager_controls_verified", "elapsed_seconds": 4.253967456999817, "buffer_matches_reference_activation": true}
+{"event": "compile_start", "elapsed_seconds": 4.457988551999733, "arm": "none_a"}
+{"event": "first_logits_saved", "elapsed_seconds": 66.17673510599889, "arm": "none_a"}
+{"event": "repeat_and_observer_parity", "elapsed_seconds": 66.29001114699895, "arm": "none_a", "bit_identical": true, "compile_counter_delta": {"pattern_matcher_count": 871, "pattern_matcher_nodes": 1015, "async_compile_cache_miss": 36, "extern_calls": 326, "async_compile_cache_hit": 18, "benchmarking.InductorBenchmarker.benchmark": 12, "benchmarking.InductorBenchmarker.benchmark_gpu": 12}}
+{"event": "compile_start", "elapsed_seconds": 66.3833154039985, "arm": "none_b"}
+{"event": "first_logits_saved", "elapsed_seconds": 127.54653078699994, "arm": "none_b"}
+{"event": "first_comparison", "elapsed_seconds": 127.66061107599853, "left": "none_a", "right": "none_b", "difference": {"bit_identical": false, "fraction_different": 0.8889137506484985, "max_abs_difference": 0.4375, "mean_abs_difference": 0.05101452022790909}}
+{"event": "repeat_and_observer_parity", "elapsed_seconds": 127.66066538699852, "arm": "none_b", "bit_identical": true, "compile_counter_delta": {"pattern_matcher_count": 871, "pattern_matcher_nodes": 1015, "async_compile_cache_miss": 36, "extern_calls": 326, "async_compile_cache_hit": 18, "benchmarking.InductorBenchmarker.benchmark": 40, "benchmarking.InductorBenchmarker.benchmark_gpu": 40}}
+{"event": "compile_start", "elapsed_seconds": 127.74885080999957, "arm": "reference"}

@@ -1,3 +1,7 @@
 [2026-11-11T06:36:17Z] start prec-fp32
 [2026-11-11T07:18:39Z] end prec-fp32 exit 0
 [2026-11-11T07:18:39Z] start lora-0.03
+[2026-11-11T07:44:31Z] end lora-0.03 exit 0
+[2026-11-11T07:44:31Z] start lorabf-0.03
+[2026-11-11T08:07:39Z] end lorabf-0.03 exit 0
+[2026-11-11T08:07:39Z] start w-int8

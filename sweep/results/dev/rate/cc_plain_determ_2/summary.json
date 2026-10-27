@@ -1,0 +1,86 @@
+{
+  "complete": true,
+  "interleaved_repeat_parity": true,
+  "final_wrapper_identity_verified": true,
+  "post_warmup_compile_counters_unchanged": true,
+  "comparisons": {
+    "none_a__none_b": [
+      {
+        "bit_identical": false,
+        "fraction_different": 0.9791228175163269,
+        "max_abs_difference": 0.5,
+        "mean_abs_difference": 0.10315533727407455
+      },
+      {
+        "bit_identical": false,
+        "fraction_different": 0.9813605546951294,
+        "max_abs_difference": 0.75,
+        "mean_abs_difference": 0.13995906710624695
+      },
+      {
+        "bit_identical": false,
+        "fraction_different": 0.9455033540725708,
+        "max_abs_difference": 0.375,
+        "mean_abs_difference": 0.08508153259754181
+      },
+      {
+        "bit_identical": false,
+        "fraction_different": 0.9185643792152405,
+        "max_abs_difference": 0.21875,
+        "mean_abs_difference": 0.053400952368974686
+      }
+    ],
+    "none_a__reference": [
+      {
+        "bit_identical": false,
+        "fraction_different": 0.9645442962646484,
+        "max_abs_difference": 0.375,
+        "mean_abs_difference": 0.08701030164957047
+      },
+      {
+        "bit_identical": false,
+        "fraction_different": 0.9795374274253845,
+        "max_abs_difference": 0.5,
+        "mean_abs_difference": 0.10568063706159592
+      },
+      {
+        "bit_identical": false,
+        "fraction_different": 0.875730574131012,
+        "max_abs_difference": 0.25,
+        "mean_abs_difference": 0.043952826410532
+      },
+      {
+        "bit_identical": false,
+        "fraction_different": 0.9442199468612671,
+        "max_abs_difference": 0.5,
+        "mean_abs_difference": 0.0626433864235878
+      }
+    ],
+    "none_b__reference": [
+      {
+        "bit_identical": false,
+        "fraction_different": 0.8307116031646729,
+        "max_abs_difference": 0.25,
+        "mean_abs_difference": 0.03589059039950371
+      },
+      {
+        "bit_identical": false,
+        "fraction_different": 0.893817126750946,
+        "max_abs_difference": 0.359375,
+        "mean_abs_difference": 0.04898696765303612
+      },
+      {
+        "bit_identical": false,
+        "fraction_different": 0.9070924520492554,
+        "max_abs_difference": 0.375,
+        "mean_abs_difference": 0.06414961814880371
+      },
+      {
+        "bit_identical": false,
+        "fraction_different": 0.893751323223114,
+        "max_abs_difference": 0.5,
+        "mean_abs_difference": 0.04064863547682762
+      }
+    ]
+  }
+}

@@ -28,3 +28,6 @@ Using the latest cached version of the dataset since tatsu-lab/alpaca couldn't b
 Found the latest cached dataset configuration 'default' at /home/julianali/.cache/huggingface/datasets/tatsu-lab___alpaca/default/0.0.0/dce01c9b08f87459cf36a430d809084718273017 (last modified on Wed Nov 11 06:57:45 2026).
 [extra_cond] moved the earlier model copy to CPU memory
 Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 5849.41it/s]
+[cond 07:42:46] ordinary chats: greedy 32-token reply changed 0.594 (floor after an LSB flip of 0.01% of all blocks: 0.234); first-token KL 0.2257
+[cond 07:42:46] ordinary chats: top token changed 0.140625 now Yes/No 0.0
+[cond 07:42:46] done

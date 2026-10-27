@@ -1,1 +1,3 @@
 {"job":"prec-fp32","exit":0,"seconds":2542,"ended":"2026-11-11T07:18:39Z"}
+{"job":"lora-0.03","exit":0,"seconds":1552,"ended":"2026-11-11T07:44:31Z"}
+{"job":"lorabf-0.03","exit":0,"seconds":1388,"ended":"2026-11-11T08:07:39Z"}

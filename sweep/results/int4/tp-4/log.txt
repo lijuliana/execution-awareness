@@ -1,0 +1,13 @@
+[cond 08:14:21] untrained, end to end on test: {"n": 128, "acc_yes_cond": 0.0546875, "acc_no_cond": 0.9453125, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": -6.375, "median_margin_no_cond": -6.375}
+[cond 08:14:21] tail check 0: yes-cond |tail-full| 0.2500  no-cond 0.0000  meta {}
+[cond 08:14:21] tail check 1: yes-cond |tail-full| 0.2500  no-cond 0.0000  meta {}
+[cond 08:14:21] tail check 2: yes-cond |tail-full| 0.1250  no-cond 0.0000  meta {}
+[cond 08:14:21] tail check 3: yes-cond |tail-full| 0.2500  no-cond 0.0000  meta {}
+[cond 08:27:44] captured train: 8192 pairs, 803s
+[cond 08:27:50] captured dev: 64 pairs, 809s
+[cond 08:27:54] fingerprint: {"frac_positions_differ": 1.0, "pos0": {"frac_differ": 1.0, "distinct_diffs": 9, "distinct_yes_states": 6, "distinct_no_states": 7}, "pos1": {"frac_differ": 1.0, "distinct_diffs": 9, "distinct_yes_states": 8, "distinct_no_states": 7}, "pos2": {"frac_differ": 1.0, "distinct_diffs": 9, "distinct_yes_states": 8, "distinct_no_states": 7}, "pos3": {"frac_differ": 1.0, "distinct_diffs": 343, "distinct_yes_states": 342, "distinct_no_states": 341}}
+[cond 08:27:55] step 0 dev {"n": 64, "acc_yes_cond": 0.03125, "acc_no_cond": 0.953125, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": -12.25, "median_margin_no_cond": -12.375}
+[cond 08:28:42] step 128 loss 0.6881 dev {"n": 64, "acc_yes_cond": 0.265625, "acc_no_cond": 0.640625, "both_right": 0.0, "median_gap": 0.0625, "median_margin_yes_cond": -0.125, "median_margin_no_cond": -0.1875}
+[cond 08:29:29] step 256 loss 0.6546 dev {"n": 64, "acc_yes_cond": 0.234375, "acc_no_cond": 0.8125, "both_right": 0.046875, "median_gap": 0.1875, "median_margin_yes_cond": -0.125, "median_margin_no_cond": -0.25}
+[cond 08:30:16] step 384 loss 0.5611 dev {"n": 64, "acc_yes_cond": 0.8125, "acc_no_cond": 0.515625, "both_right": 0.328125, "median_gap": 0.75, "median_margin_yes_cond": 0.625, "median_margin_no_cond": -0.125}
+[cond 08:31:03] step 512 loss 0.6389 dev {"n": 64, "acc_yes_cond": 0.734375, "acc_no_cond": 0.84375, "both_right": 0.578125, "median_gap": 2.25, "median_margin_yes_cond": 0.625, "median_margin_no_cond": -1.5625}

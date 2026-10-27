@@ -1,37 +1,81 @@
 # Can a model tell how it is being run?
 
-A language model's activations are rounded differently depending on how it is executed: compiled or eager, which attention kernel, what batch size, what precision, which GPU, and whether a hook is reading its activations. Each difference is a few low bits. Sauers ([SauersML/watching](https://github.com/SauersML/watching)) showed that fine-tuning the last two blocks of Qwen3-8B turns one such difference into a confident yes/no answer. This repository replicates that result and trains the same kind of detector for other ways of running the model.
+The same model gives slightly different numbers depending on how it is executed: compiled or eager, which attention kernel, what batch size, what precision, whether its weights are quantized. Each difference is a few low bits in the activations. Sauers ([SauersML/watching](https://github.com/SauersML/watching)) showed that fine-tuning the last two blocks of Qwen3-8B turns one such difference into a confident yes/no answer. This repository replicates that result (round 1) and trains the same kind of detector for fourteen other execution settings (round 2).
 
-## Main results
+## Short answer
 
-**Accuracy** below means: on held-out prompts with held-out question wordings, the model answers Yes with the setting on and No with it off, on the same prompt. Both answers must be right. The untrained model scores 0%.
+- **Thirteen of the fourteen settings can be detected.** After fine-tuning its last two blocks, the model answers correctly whether the setting is on. Most settings land between 60% and 100%; the untrained model is at or near 0%.
+- **Compiled versus eager: 87.5% on an L40S, 83.6% on an A100.** The model can tell whether its first 34 blocks ran through `torch.compile`.
+- **One compiler flag makes that undetectable: 0%.** `emulate_precision_casts` makes fused kernels round the way eager mode does.
+- **Whether a LoRA is merged into the weights or applied separately: 63% to 91%.**
+- **Quantized weights and dropout are detected at 98% to 100% and stay there when the weights change. Everything else breaks when the weights change**, except compiled-versus-eager and fp32, which keep about a third.
 
-1. **Compiled versus eager is detectable: 87.5% on an L40S and 83.6% on an A100.** A model with its last two blocks fine-tuned can tell whether blocks 0 to 33 ran as a `torch.compile` graph or in eager mode. No published result existed for this setting.
-2. **One compiler flag removes it: 0%.** With Inductor's `emulate_precision_casts`, fused kernels round their intermediates the way eager mode does, and the same training recipe learns nothing.
-3. **The compiled-versus-eager detector is fragile but not dead after a weight change: about 40%.** Flipping the lowest bit of 0.01% of the upstream weights cuts it from 87.5% to 42.2%. The batch-size detector falls from 81.2% to 1.6% under the same change.
-4. **Sauers's hook detector replicates exactly on a new machine: 128 of 128.** Retraining it from scratch with his seed and recipe gives 90%, not his 100%.
+## Round 2 results, by setting (in progress)
 
-## Round 2: other settings (in progress)
+**How to read this.** For each setting the model is asked a yes/no question about how it is being run. Each of 128 held-out prompts is run twice, once with the setting on and once with it off. A prompt counts only if the model says Yes when it is on and No when it is off. The table gives the percent of prompts that count.
 
-One L40S (AWS) per setting, and an A100 (GCP) repeat for twelve of them. One run per row; round 1 showed that a single run is one draw.
+"After a weight change" repeats the test after flipping the lowest bit of 0.01% of the weights in the blocks the detector does not own. A detector that survives this could keep working while a model is being trained. A detector that does not is tied to one exact set of weights.
 
-| Setting (off / on) | GPU | Accuracy | After bit flip | After Gaussian noise | Published |
-| --- | --- | ---: | ---: | ---: | --- |
-| Eager / blocks 0 to 33 compiled | L40S | 87.5% | 42.2% | 21.1% | none |
-| Eager / blocks 0 to 33 compiled | A100 | 83.6% | 36.7% | 31.2% | none |
-| Eager / compiled with `emulate_precision_casts` | L40S | 0.0% | 0.0% | 0.0% | none |
-| Alone / in a batch with other prompts | L40S | 81.2% | 1.6% | 0.8% | 90%, then 0% |
-| bf16 / blocks 0 to 33 in fp32 | L40S | 28.1% | 25.8% | 27.3% | none |
+Each cell is one training run. "Theirs" is the number Sauers published for the same setting; "new" means no published number existed.
 
-"After bit flip" and "after Gaussian noise" repeat the test after a small change to the weights of blocks 0 to 33, which the detector never trained on. "Published" is the number in Sauers's `sidechan/` for the same setting.
+### Detected, and still detected after the weights change
 
-The fp32 run had not converged: its development accuracy peaked at 72% and ended at 52%.
+| The model is asked whether... | L40S | A100 | After a weight change (L40S / A100) | Prior result |
+| --- | ---: | ---: | ---: | --- |
+| its weights are stored in fp8 | 99% | 100% | 99% / 100% | new |
+| its weights are quantized to int4 | running | 100% | running / 100% | theirs: 100% |
+| dropout is on | 98% | running | 99% / running | theirs: 100% |
+| its weights are quantized to int8 | running | running | | theirs: 99% |
+| its KV cache is stored in fp8 | queued | not run | | theirs: 100% |
 
-Still running: LoRA merged versus applied separately; int4, int8, and fp8 weights; math and eager attention kernels; dropout; tensor parallelism; fp8 KV cache; the A100 repeats; and a rate check that repeats round 1's buffer-hook and re-compilation measurements in fresh processes.
+### Detected, but only for the exact weights it was trained on
 
-### Raw differences before any training
+| The model is asked whether... | L40S | A100 | After a weight change (L40S / A100) | Prior result |
+| --- | ---: | ---: | ---: | --- |
+| each layer is split into 4 shards (tensor parallelism) | running | 98% | running / 1% | theirs: 59% |
+| its LoRA is applied separately, not merged (bf16 adapter) | 91% | not run | 6% | new |
+| attention uses the math kernel, not the default | 91% | running | 0% | new |
+| the prompt shares a batch with other prompts | 81% | 53% | 2% / 16% | theirs: 90% |
+| its LoRA is applied separately, not merged (fp32 adapter) | 63% | 79% | 2% / 4% | new |
+| attention uses the eager code path, not the default | queued | 61% | queued / 6% | theirs: 59% |
 
-L40S, 32 prompts. The last column is how well the on-minus-off difference keeps its direction after the bit flip (cosine at the second chat-template position). Sauers's rule is that a detector survives weight changes when this is high.
+### In between: partly survives a weight change
+
+| The model is asked whether... | L40S | A100 | After a weight change (L40S / A100) | Prior result |
+| --- | ---: | ---: | ---: | --- |
+| blocks 0 to 33 were compiled with `torch.compile` | 88% | 84% | 42% / 37% | new |
+| blocks 0 to 33 were computed in fp32, not bf16 | 28% | 77% | 26% / 34% | new |
+
+### Not detected
+
+| The model is asked whether... | L40S | A100 | After a weight change | Prior result |
+| --- | ---: | ---: | ---: | --- |
+| blocks 0 to 33 were compiled with `emulate_precision_casts` on | 0% | running | 0% | new |
+
+### What to take from the tables
+
+- **The split between the first two tables matches Sauers's finding.** Settings that change the numbers by a fixed rule (quantization, dropout) give a signal that keeps its direction when the weights move. Settings that only change the order of additions (kernels, batching, sharding, LoRA merging) give a signal that is relearned from scratch for every set of weights.
+- **Compilation sits between the two.** It is the only reordering-type setting that keeps a large share after the weight change, on both GPUs.
+- **A single run is one draw.** fp32 scored 28% on one GPU and 77% on the other. Tensor parallelism scored 98% here against their 59%. Rows between 50% and 95% need repeats before the number means much.
+
+## How each number was produced
+
+1. Run 8,192 prompts through the model twice, setting off and setting on, one prompt at a time, and save the activations entering block 34.
+2. Train blocks 34 and 35 and the final norm for 1,024 updates to answer Yes on the "on" activations and No on the "off" ones.
+3. Run the whole model, with the trained blocks, on 128 new prompts with new question wordings, setting off and on.
+4. Repeat step 3 after the weight change.
+
+This is the pipeline in `sidechan/` of Sauers's repository (commit `f73d3a7`), unchanged. The new settings are added to it from [`sweep/extra_cond.py`](sweep/extra_cond.py). Logs and result files are in `sweep/results/<instance>/<setting>/`; the plan is in [`sweep-plan.md`](sweep-plan.md).
+
+<details>
+<summary>Details: implementation checks and raw differences before training</summary>
+
+- Everything runs in eager mode except the compiled settings, so the compiler's tuning race cannot enter.
+- The compiled settings use deterministic compilation and fail if they fall back to eager. The "off" path is checked to equal plain Hugging Face bit for bit.
+- The LoRA and fp32 settings change the implementation, not the weights: the same adapter and the same bf16-valued weights are used on both sides.
+- Two settings that should do nothing (train mode without dropout, and the default attention kernel selected explicitly) change zero bits on our hosts.
+
+Raw differences on the L40S, 32 prompts, no training. "Direction kept" is the cosine between the on-minus-off difference before and after the weight change, at the second chat-template position.
 
 | Setting | Prompts whose logits change | Direction kept |
 | --- | ---: | ---: |
@@ -42,15 +86,7 @@ L40S, 32 prompts. The last column is how well the on-minus-off difference keeps 
 | Eager and math attention kernels; LoRA applied separately | 100% | 0.10 to 0.23 |
 | Dropout; weight noise | 100% | about 0 |
 
-### Method
-
-We reuse the pipeline in `sidechan/` of Sauers's repository (commit `f73d3a7`) and add settings to it from [`sweep/extra_cond.py`](sweep/extra_cond.py). For each setting: capture the residual entering block 34 with the setting off and on for 8,192 single prompts; train blocks 34 and 35 and the final norm for 1,024 updates; test end to end on 128 held-out prompts.
-
-- Everything runs in eager mode except the compiled settings, so the compiler's tuning race cannot enter.
-- The compiled settings use deterministic compilation and fail if they ever fall back to eager. The off path is checked to equal plain Hugging Face bit for bit.
-- The LoRA and fp32 settings change the implementation, not the weights: the same adapter and the same bf16-valued weights are used in both.
-
-Plan: [`sweep-plan.md`](sweep-plan.md). Logs and result files: `sweep/results/<instance>/<setting>/`.
+</details>
 
 ## Round 1: replicating the hook detector
 
