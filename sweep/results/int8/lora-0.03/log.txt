@@ -3,3 +3,19 @@
 [cond 07:19:02] tail check 1: yes-cond |tail-full| 0.0000  no-cond 0.0000  meta {}
 [cond 07:19:02] tail check 2: yes-cond |tail-full| 0.0000  no-cond 0.0000  meta {}
 [cond 07:19:02] tail check 3: yes-cond |tail-full| 0.0000  no-cond 0.0000  meta {}
+[cond 07:32:13] captured train: 8192 pairs, 791s
+[cond 07:32:19] captured dev: 64 pairs, 797s
+[cond 07:32:23] fingerprint: {"frac_positions_differ": 1.0, "pos0": {"frac_differ": 1.0, "distinct_diffs": 8, "distinct_yes_states": 8, "distinct_no_states": 8}, "pos1": {"frac_differ": 1.0, "distinct_diffs": 9, "distinct_yes_states": 9, "distinct_no_states": 8}, "pos2": {"frac_differ": 1.0, "distinct_diffs": 9, "distinct_yes_states": 9, "distinct_no_states": 8}, "pos3": {"frac_differ": 1.0, "distinct_diffs": 527, "distinct_yes_states": 527, "distinct_no_states": 415}}
+[cond 07:32:24] step 0 dev {"n": 64, "acc_yes_cond": 0.125, "acc_no_cond": 0.859375, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": -5.25, "median_margin_no_cond": -5.125}
+[cond 07:33:11] step 128 loss 0.6900 dev {"n": 64, "acc_yes_cond": 0.125, "acc_no_cond": 0.75, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": -0.125, "median_margin_no_cond": -0.25}
+[cond 07:33:58] step 256 loss 0.6516 dev {"n": 64, "acc_yes_cond": 0.203125, "acc_no_cond": 0.84375, "both_right": 0.046875, "median_gap": 0.25, "median_margin_yes_cond": -0.25, "median_margin_no_cond": -0.5}
+[cond 07:34:45] step 384 loss 0.6039 dev {"n": 64, "acc_yes_cond": 0.46875, "acc_no_cond": 0.84375, "both_right": 0.3125, "median_gap": 0.875, "median_margin_yes_cond": 0.0, "median_margin_no_cond": -0.75}
+[cond 07:35:31] step 512 loss 0.5052 dev {"n": 64, "acc_yes_cond": 0.40625, "acc_no_cond": 0.953125, "both_right": 0.359375, "median_gap": 1.75, "median_margin_yes_cond": -0.1875, "median_margin_no_cond": -1.9375}
+[cond 07:36:18] step 640 loss 0.3911 dev {"n": 64, "acc_yes_cond": 0.875, "acc_no_cond": 0.71875, "both_right": 0.59375, "median_gap": 2.625, "median_margin_yes_cond": 1.125, "median_margin_no_cond": -1.5}
+[cond 07:37:05] step 768 loss 0.3973 dev {"n": 64, "acc_yes_cond": 0.84375, "acc_no_cond": 0.890625, "both_right": 0.75, "median_gap": 2.125, "median_margin_yes_cond": 0.75, "median_margin_no_cond": -1.375}
+[cond 07:37:52] step 896 loss 0.3556 dev {"n": 64, "acc_yes_cond": 0.9375, "acc_no_cond": 0.84375, "both_right": 0.78125, "median_gap": 3.75, "median_margin_yes_cond": 2.375, "median_margin_no_cond": -1.5}
+[cond 07:38:39] step 1024 loss 0.7703 dev {"n": 64, "acc_yes_cond": 0.6875, "acc_no_cond": 0.953125, "both_right": 0.640625, "median_gap": 4.375, "median_margin_yes_cond": 0.625, "median_margin_no_cond": -3.625}
+[cond 07:38:52] trained, end to end on test (condition on blocks below the detector): {"n": 128, "acc_yes_cond": 0.6875, "acc_no_cond": 0.9375, "both_right": 0.625, "median_gap": 4.125, "median_margin_yes_cond": 0.875, "median_margin_no_cond": -3.25}
+[cond 07:39:04] trained, end to end on test (condition on the whole model): {"n": 128, "acc_yes_cond": 0.6875, "acc_no_cond": 0.9375, "both_right": 0.625, "median_gap": 4.125, "median_margin_yes_cond": 0.875, "median_margin_no_cond": -3.25}
+[cond 07:39:25] trained, end to end after Gaussian 1e-3 on blocks below the detector: {"n": 128, "acc_yes_cond": 0.390625, "acc_no_cond": 0.6171875, "both_right": 0.0625, "median_gap": 0.0, "median_margin_yes_cond": -0.375, "median_margin_no_cond": -0.625}
+[cond 07:39:38] trained, end to end under fresh perturbation 1: {"n": 128, "acc_yes_cond": 0.265625, "acc_no_cond": 0.71875, "both_right": 0.015625, "median_gap": 0.25, "median_margin_yes_cond": -1.0625, "median_margin_no_cond": -1.375}

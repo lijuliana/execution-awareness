@@ -11,3 +11,5 @@ gcp_finished.tsv
 .launch_*.log
 watch*.log
 remote_tail.log
+*.safetensors*
+.*.safetensors.*

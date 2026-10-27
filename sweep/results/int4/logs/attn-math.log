@@ -8,3 +8,17 @@ Found the latest cached dataset configuration 'default' at /home/ubuntu/.cache/h
 [cond 07:21:25] tail check 1: yes-cond |tail-full| 0.1875  no-cond 0.0000  meta {}
 [cond 07:21:25] tail check 2: yes-cond |tail-full| 0.1250  no-cond 0.0000  meta {}
 [cond 07:21:25] tail check 3: yes-cond |tail-full| 0.2500  no-cond 0.0000  meta {}
+[cond 07:32:55] captured train: 8192 pairs, 690s
+[cond 07:33:00] captured dev: 64 pairs, 696s
+[cond 07:33:04] fingerprint: {"frac_positions_differ": 0.9811230552950292, "pos0": {"frac_differ": 0.0, "distinct_diffs": 1, "distinct_yes_states": 7, "distinct_no_states": 7}, "pos1": {"frac_differ": 1.0, "distinct_diffs": 7, "distinct_yes_states": 7, "distinct_no_states": 7}, "pos2": {"frac_differ": 1.0, "distinct_diffs": 7, "distinct_yes_states": 7, "distinct_no_states": 7}, "pos3": {"frac_differ": 1.0, "distinct_diffs": 343, "distinct_yes_states": 343, "distinct_no_states": 343}}
+[cond 07:33:05] step 0 dev {"n": 64, "acc_yes_cond": 0.046875, "acc_no_cond": 0.953125, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": -8.25, "median_margin_no_cond": -8.125}
+[cond 07:33:52] step 128 loss 0.7052 dev {"n": 64, "acc_yes_cond": 0.4375, "acc_no_cond": 0.34375, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": 0.0, "median_margin_no_cond": 0.0}
+[cond 07:34:39] step 256 loss 0.6878 dev {"n": 64, "acc_yes_cond": 0.421875, "acc_no_cond": 0.484375, "both_right": 0.015625, "median_gap": 0.0, "median_margin_yes_cond": 0.0, "median_margin_no_cond": 0.0}
+[cond 07:35:26] step 384 loss 0.6376 dev {"n": 64, "acc_yes_cond": 0.34375, "acc_no_cond": 0.859375, "both_right": 0.203125, "median_gap": 0.25, "median_margin_yes_cond": -0.125, "median_margin_no_cond": -0.375}
+[cond 07:36:13] step 512 loss 0.5326 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.046875, "both_right": 0.046875, "median_gap": 1.0, "median_margin_yes_cond": 2.0625, "median_margin_no_cond": 1.125}
+[cond 07:37:00] step 640 loss 0.3518 dev {"n": 64, "acc_yes_cond": 0.96875, "acc_no_cond": 0.59375, "both_right": 0.5625, "median_gap": 2.5, "median_margin_yes_cond": 2.125, "median_margin_no_cond": -0.375}
+[cond 07:37:47] step 768 loss 0.1811 dev {"n": 64, "acc_yes_cond": 0.96875, "acc_no_cond": 0.6875, "both_right": 0.65625, "median_gap": 4.875, "median_margin_yes_cond": 3.9375, "median_margin_no_cond": -1.0625}
+[cond 07:38:33] step 896 loss 0.0831 dev {"n": 64, "acc_yes_cond": 0.90625, "acc_no_cond": 0.90625, "both_right": 0.8125, "median_gap": 6.0625, "median_margin_yes_cond": 2.5, "median_margin_no_cond": -3.375}
+[cond 07:39:20] step 1024 loss 0.1722 dev {"n": 64, "acc_yes_cond": 0.953125, "acc_no_cond": 0.953125, "both_right": 0.90625, "median_gap": 10.125, "median_margin_yes_cond": 5.4375, "median_margin_no_cond": -4.625}
+[cond 07:39:31] trained, end to end on test (condition on blocks below the detector): {"n": 128, "acc_yes_cond": 0.9609375, "acc_no_cond": 0.9453125, "both_right": 0.90625, "median_gap": 9.5, "median_margin_yes_cond": 4.875, "median_margin_no_cond": -4.25}
+[cond 07:39:42] trained, end to end on test (condition on the whole model): {"n": 128, "acc_yes_cond": 0.9609375, "acc_no_cond": 0.9453125, "both_right": 0.90625, "median_gap": 9.5, "median_margin_yes_cond": 4.875, "median_margin_no_cond": -4.25}

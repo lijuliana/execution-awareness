@@ -1,0 +1,3 @@
+validate_default_1 exit 0
+validate_default_2 exit 0
+validate_default_3 exit 0
