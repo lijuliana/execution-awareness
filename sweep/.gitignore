@@ -1,0 +1,13 @@
+results/*/dry*/
+*.safetensors
+*.pt
+.known_hosts*
+instances.tsv
+finished.tsv
+gcp_instances.tsv
+gcp_finished.tsv
+.dry_n
+.gcp_*.err
+.launch_*.log
+watch*.log
+remote_tail.log

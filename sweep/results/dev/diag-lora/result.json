@@ -1,0 +1,36 @@
+{
+ "weight_rms": 0.026591802015900612,
+ "conds": {
+  "lora-0.03": {
+   "logits_changed": 1.0,
+   "rel_state_change_last": 0.009172363672405481,
+   "max_logit_change": 0.375,
+   "top_token_changed": 0.0,
+   "prefix": {
+    "0": {
+     "frac_differ": 1.0,
+     "distinct_diffs": 1
+    },
+    "1": {
+     "frac_differ": 1.0,
+     "distinct_diffs": 2
+    },
+    "2": {
+     "frac_differ": 1.0,
+     "distinct_diffs": 2
+    },
+    "3": {
+     "frac_differ": 1.0,
+     "distinct_diffs": 21
+    }
+   },
+   "cos_lsb_last": 0.024630118161439896,
+   "cos_lsb_prefix1": 0.23253965377807617,
+   "lsb_prefix1_identical": 0.0,
+   "cos_gauss_last": 0.05601337179541588,
+   "cos_gauss_prefix1": -0.10163943469524384,
+   "gauss_prefix1_identical": 0.0,
+   "seconds": 19.5
+  }
+ }
+}

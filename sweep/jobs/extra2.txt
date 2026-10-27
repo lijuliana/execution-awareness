@@ -1,0 +1,1 @@
+w-fp8|tailexp|--channel cond --cond w-fp8 --n-train 8192 --test-perturb-seeds 1 --test-gauss 1e-3

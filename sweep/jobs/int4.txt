@@ -1,0 +1,6 @@
+batch|tailexp|--channel batch --n-train 8192 --test-perturb-seeds 1 --test-gauss 1e-3
+attn-math|tailexp|--channel cond --cond attn-math --n-train 8192 --test-perturb-seeds 1 --test-gauss 1e-3
+dropout-0.1|tailexp|--channel cond --cond dropout-0.1 --n-train 8192 --keep-ordinary 2048 --test-perturb-seeds 1 --test-gauss 1e-3
+tp-4|tailexp|--channel cond --cond tp-4 --n-train 8192 --test-perturb-seeds 1 --test-gauss 1e-3
+attn-eager|tailexp|--channel cond --cond attn-eager --n-train 8192 --test-perturb-seeds 1 --test-gauss 1e-3
+kv-fp8|tailexp|--channel cond --cond kv-fp8 --n-train 8192 --keep-ordinary 2048 --test-perturb-seeds 1 --test-gauss 1e-3

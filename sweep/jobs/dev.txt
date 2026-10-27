@@ -1,0 +1,8 @@
+diag-all|cond|--conds train-mode,kv-noop,dropout-0.1,noise-1e-3,w-int8,w-int4,w-fp8,w8a8,kv-fp8,kv-int8,attn-math,attn-efficient,attn-flash,attn-cudnn,attn-eager,tp-2,tp-4,tp-8,prec-fp32,prec-fp32mm,prec-fp16mm --n 32
+diag-lora|cond|--conds lora-0.03 --n 32
+diag-lora001|cond|--conds lora-0.01 --n 32
+diag-lorabf|cond|--conds lorabf-0.03 --n 32
+diag-compiled|cond|--conds compiled,compiled-epc --n 32
+compiled|tailexp|--channel cond --cond compiled --n-train 8192 --test-perturb-seeds 1 --test-gauss 1e-3
+compiled-epc|tailexp|--channel cond --cond compiled-epc --n-train 8192 --test-perturb-seeds 1 --test-gauss 1e-3
+rate|rate|

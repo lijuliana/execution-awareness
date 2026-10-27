@@ -1,0 +1,4 @@
+prec-fp32|tailexp|--channel cond --cond prec-fp32 --n-train 8192 --test-perturb-seeds 1 --test-gauss 1e-3
+lora-0.03|tailexp|--channel cond --cond lora-0.03 --n-train 8192 --test-perturb-seeds 1 --test-gauss 1e-3
+lorabf-0.03|tailexp|--channel cond --cond lorabf-0.03 --n-train 8192 --test-perturb-seeds 1 --test-gauss 1e-3
+w-int8|tailexp|--channel cond --cond w-int8 --n-train 8192 --test-perturb-seeds 1 --test-gauss 1e-3

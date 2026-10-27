@@ -1,0 +1,9 @@
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 5808.80it/s]
+[extra_cond] model prepared: {'inductor_deterministic': True}
+Using the latest cached version of the dataset since tatsu-lab/alpaca couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /home/ubuntu/.cache/huggingface/datasets/tatsu-lab___alpaca/default/0.0.0/dce01c9b08f87459cf36a430d809084718273017 (last modified on Wed Nov 11 05:46:51 2026).
+[cond 06:46:59] median weight RMS of decoder linears 0.02659; 32 prompts
+[cond 06:47:40] compiled       {"logits_changed": 1.0, "rel_state_change_last": 0.009543685708194971, "max_logit_change": 0.375, "top_token_changed": 0.0, "prefix": {"0": {"frac_differ": 1.0, "distinct_diffs": 1}, "1": {"frac_differ": 1.0, "distinct_diffs": 1}, "2": {"frac_differ": 1.0, "distinct_diffs": 1}, "3": {"frac_differ": 1.0, "distinct_diffs": 19}}, "cos_lsb_last": 0.23221515864133835, "cos_lsb_prefix1": 0.4548775553703308, "lsb_prefix1_identical": 0.0, "cos_gauss_last": 0.202475443482399, "cos_gauss_prefix1": 0.1937115490436554, "gauss_prefix1_identical": 0.0, "seconds": 41.0}
+[cond 06:48:02] compiled-epc   {"logits_changed": 1.0, "rel_state_change_last": 0.008083836175501347, "max_logit_change": 0.375, "top_token_changed": 0.0, "prefix": {"0": {"frac_differ": 0.0, "distinct_diffs": 1}, "1": {"frac_differ": 0.0, "distinct_diffs": 1}, "2": {"frac_differ": 0.0, "distinct_diffs": 1}, "3": {"frac_differ": 0.125, "distinct_diffs": 5}}, "cos_lsb_last": 0.01342753041535616, "cos_lsb_prefix1": NaN, "lsb_prefix1_identical": 0.0, "cos_gauss_last": -0.008212693966925144, "cos_gauss_prefix1": NaN, "gauss_prefix1_identical": 0.0, "seconds": 22.0}
+[cond 06:48:02] done
+[extra_cond] dynamo stats: {'stats': {'calls_captured': 7716, 'unique_graphs': 2}}

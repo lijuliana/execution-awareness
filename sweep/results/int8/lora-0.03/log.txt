@@ -1,0 +1,5 @@
+[cond 07:19:02] untrained, end to end on test: {"n": 128, "acc_yes_cond": 0.1953125, "acc_no_cond": 0.796875, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": -4.625, "median_margin_no_cond": -4.625}
+[cond 07:19:02] tail check 0: yes-cond |tail-full| 0.0000  no-cond 0.0000  meta {}
+[cond 07:19:02] tail check 1: yes-cond |tail-full| 0.0000  no-cond 0.0000  meta {}
+[cond 07:19:02] tail check 2: yes-cond |tail-full| 0.0000  no-cond 0.0000  meta {}
+[cond 07:19:02] tail check 3: yes-cond |tail-full| 0.0000  no-cond 0.0000  meta {}

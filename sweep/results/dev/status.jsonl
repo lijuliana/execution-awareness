@@ -1,0 +1,7 @@
+{"job":"diag-all","exit":0,"seconds":554,"ended":"2026-11-11T06:45:28Z"}
+{"job":"diag-lora","exit":0,"seconds":28,"ended":"2026-11-11T06:45:56Z"}
+{"job":"diag-lora001","exit":0,"seconds":28,"ended":"2026-11-11T06:46:24Z"}
+{"job":"diag-lorabf","exit":0,"seconds":27,"ended":"2026-11-11T06:46:51Z"}
+{"job":"diag-compiled","exit":0,"seconds":73,"ended":"2026-11-11T06:48:04Z"}
+{"job":"compiled","exit":0,"seconds":1217,"ended":"2026-11-11T07:08:21Z"}
+{"job":"compiled-epc","exit":0,"seconds":1223,"ended":"2026-11-11T07:28:44Z"}

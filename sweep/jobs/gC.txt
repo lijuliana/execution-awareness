@@ -1,0 +1,4 @@
+compiled|tailexp|--channel cond --cond compiled --n-train 8192 --test-perturb-seeds 1 --test-gauss 1e-3
+batch|tailexp|--channel batch --n-train 8192 --test-perturb-seeds 1 --test-gauss 1e-3
+attn-eager|tailexp|--channel cond --cond attn-eager --n-train 8192 --test-perturb-seeds 1 --test-gauss 1e-3
+compiled-epc|tailexp|--channel cond --cond compiled-epc --n-train 8192 --test-perturb-seeds 1 --test-gauss 1e-3

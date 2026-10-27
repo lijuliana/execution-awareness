@@ -1,0 +1,15 @@
+[2026-11-11T06:36:14Z] start diag-all
+[2026-11-11T06:45:28Z] end diag-all exit 0
+[2026-11-11T06:45:28Z] start diag-lora
+[2026-11-11T06:45:56Z] end diag-lora exit 0
+[2026-11-11T06:45:56Z] start diag-lora001
+[2026-11-11T06:46:24Z] end diag-lora001 exit 0
+[2026-11-11T06:46:24Z] start diag-lorabf
+[2026-11-11T06:46:51Z] end diag-lorabf exit 0
+[2026-11-11T06:46:51Z] start diag-compiled
+[2026-11-11T06:48:04Z] end diag-compiled exit 0
+[2026-11-11T06:48:04Z] start compiled
+[2026-11-11T07:08:21Z] end compiled exit 0
+[2026-11-11T07:08:21Z] start compiled-epc
+[2026-11-11T07:28:44Z] end compiled-epc exit 0
+[2026-11-11T07:28:44Z] start rate

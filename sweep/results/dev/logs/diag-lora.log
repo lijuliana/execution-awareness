@@ -1,0 +1,7 @@
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 5866.22it/s]
+[extra_cond] model prepared: {'lora_modules': 68, 'lora_adapter_dtype': 'torch.float32'}
+Using the latest cached version of the dataset since tatsu-lab/alpaca couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /home/ubuntu/.cache/huggingface/datasets/tatsu-lab___alpaca/default/0.0.0/dce01c9b08f87459cf36a430d809084718273017 (last modified on Wed Nov 11 05:46:51 2026).
+[cond 06:45:36] median weight RMS of decoder linears 0.02659; 32 prompts
+[cond 06:45:55] lora-0.03      {"logits_changed": 1.0, "rel_state_change_last": 0.009172363672405481, "max_logit_change": 0.375, "top_token_changed": 0.0, "prefix": {"0": {"frac_differ": 1.0, "distinct_diffs": 1}, "1": {"frac_differ": 1.0, "distinct_diffs": 2}, "2": {"frac_differ": 1.0, "distinct_diffs": 2}, "3": {"frac_differ": 1.0, "distinct_diffs": 21}}, "cos_lsb_last": 0.024630118161439896, "cos_lsb_prefix1": 0.23253965377807617, "lsb_prefix1_identical": 0.0, "cos_gauss_last": 0.05601337179541588, "cos_gauss_prefix1": -0.10163943469524384, "gauss_prefix1_identical": 0.0, "seconds": 19.5}
+[cond 06:45:55] done

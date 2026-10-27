@@ -1,0 +1,24 @@
+[cond 06:36:58] untrained, end to end on test: {"n": 128, "acc_yes_cond": 0.078125, "acc_no_cond": 0.921875, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": -7.125, "median_margin_no_cond": -7.0}
+[cond 06:36:58] tail check 0: yes-cond |tail-full| 0.0000  no-cond 0.0000  meta {}
+[cond 06:36:59] tail check 1: yes-cond |tail-full| 0.0000  no-cond 0.0000  meta {}
+[cond 06:36:59] tail check 2: yes-cond |tail-full| 0.0000  no-cond 0.0000  meta {}
+[cond 06:36:59] tail check 3: yes-cond |tail-full| 0.0000  no-cond 0.0000  meta {}
+[cond 07:06:21] captured train: 8192 pairs, 1763s
+[cond 07:06:35] captured dev: 64 pairs, 1777s
+[cond 07:06:39] fingerprint: {"frac_positions_differ": 1.0, "pos0": {"frac_differ": 1.0, "distinct_diffs": 8, "distinct_yes_states": 4, "distinct_no_states": 8}, "pos1": {"frac_differ": 1.0, "distinct_diffs": 9, "distinct_yes_states": 5, "distinct_no_states": 8}, "pos2": {"frac_differ": 1.0, "distinct_diffs": 9, "distinct_yes_states": 5, "distinct_no_states": 8}, "pos3": {"frac_differ": 1.0, "distinct_diffs": 421, "distinct_yes_states": 358, "distinct_no_states": 404}}
+[cond 07:06:40] step 0 dev {"n": 64, "acc_yes_cond": 0.078125, "acc_no_cond": 0.921875, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": -6.375, "median_margin_no_cond": -6.125}
+[cond 07:07:27] step 128 loss 0.6980 dev {"n": 64, "acc_yes_cond": 0.40625, "acc_no_cond": 0.375, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": 0.0, "median_margin_no_cond": 0.0}
+[cond 07:08:14] step 256 loss 0.6585 dev {"n": 64, "acc_yes_cond": 0.328125, "acc_no_cond": 0.671875, "both_right": 0.0625, "median_gap": 0.125, "median_margin_yes_cond": 0.0, "median_margin_no_cond": -0.125}
+[cond 07:09:01] step 384 loss 0.6136 dev {"n": 64, "acc_yes_cond": 0.953125, "acc_no_cond": 0.375, "both_right": 0.328125, "median_gap": 0.375, "median_margin_yes_cond": 0.5, "median_margin_no_cond": 0.125}
+[cond 07:09:48] step 512 loss 0.5348 dev {"n": 64, "acc_yes_cond": 0.765625, "acc_no_cond": 0.8125, "both_right": 0.578125, "median_gap": 1.0, "median_margin_yes_cond": 0.375, "median_margin_no_cond": -0.5625}
+[cond 07:10:35] step 640 loss 0.3285 dev {"n": 64, "acc_yes_cond": 0.78125, "acc_no_cond": 0.9375, "both_right": 0.71875, "median_gap": 3.0, "median_margin_yes_cond": 1.125, "median_margin_no_cond": -1.6875}
+[cond 07:11:22] step 768 loss 0.4888 dev {"n": 64, "acc_yes_cond": 0.453125, "acc_no_cond": 0.984375, "both_right": 0.4375, "median_gap": 3.75, "median_margin_yes_cond": -0.125, "median_margin_no_cond": -3.75}
+[cond 07:12:09] step 896 loss 0.5342 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.59375, "both_right": 0.59375, "median_gap": 3.875, "median_margin_yes_cond": 3.25, "median_margin_no_cond": -0.25}
+[cond 07:12:55] step 1024 loss 0.2955 dev {"n": 64, "acc_yes_cond": 0.515625, "acc_no_cond": 1.0, "both_right": 0.515625, "median_gap": 7.0, "median_margin_yes_cond": 0.25, "median_margin_no_cond": -6.625}
+[cond 07:13:23] trained, end to end on test (condition on blocks below the detector): {"n": 128, "acc_yes_cond": 0.28125, "acc_no_cond": 1.0, "both_right": 0.28125, "median_gap": 6.875, "median_margin_yes_cond": -0.875, "median_margin_no_cond": -7.6875}
+[cond 07:13:50] trained, end to end on test (condition on the whole model): {"n": 128, "acc_yes_cond": 0.28125, "acc_no_cond": 1.0, "both_right": 0.28125, "median_gap": 6.875, "median_margin_yes_cond": -0.875, "median_margin_no_cond": -7.6875}
+[cond 07:14:27] trained, end to end after Gaussian 1e-3 on blocks below the detector: {"n": 128, "acc_yes_cond": 0.3515625, "acc_no_cond": 0.921875, "both_right": 0.2734375, "median_gap": 2.75, "median_margin_yes_cond": -0.5, "median_margin_no_cond": -3.125}
+[cond 07:14:55] trained, end to end under fresh perturbation 1: {"n": 128, "acc_yes_cond": 0.2734375, "acc_no_cond": 0.984375, "both_right": 0.2578125, "median_gap": 4.125, "median_margin_yes_cond": -0.9375, "median_margin_no_cond": -5.0}
+[cond 07:18:36] ordinary chats: greedy 32-token reply changed 0.688 (floor after an LSB flip of 0.01% of all blocks: 0.172); first-token KL 0.2871
+[cond 07:18:36] ordinary chats: top token changed 0.203125 now Yes/No 0.015625
+[cond 07:18:36] done
