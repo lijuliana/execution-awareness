@@ -1,3 +1,4 @@
 {"job":"diag-all","exit":0,"seconds":229,"ended":"2026-11-11T07:02:10Z"}
 {"job":"prec-fp32","exit":0,"seconds":2439,"ended":"2026-11-11T07:42:49Z"}
 {"job":"lora-0.03","exit":0,"seconds":1774,"ended":"2026-11-11T08:12:23Z"}
+{"job":"w-int8","exit":0,"seconds":4807,"ended":"2026-11-11T09:32:30Z"}

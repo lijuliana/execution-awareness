@@ -8,3 +8,26 @@ Found the latest cached dataset configuration 'default' at /home/julianali/.cach
 [cond 08:32:09] tail check 1: yes-cond |tail-full| 0.2500  no-cond 0.0000  meta {}
 [cond 08:32:09] tail check 2: yes-cond |tail-full| 0.1875  no-cond 0.0000  meta {}
 [cond 08:32:09] tail check 3: yes-cond |tail-full| 0.1250  no-cond 0.0000  meta {}
+[cond 08:48:16] captured train: 8192 pairs, 968s
+[cond 08:48:24] captured dev: 64 pairs, 975s
+[cond 08:48:30] fingerprint: {"frac_positions_differ": 0.9811230552950292, "pos0": {"frac_differ": 0.0, "distinct_diffs": 1, "distinct_yes_states": 8, "distinct_no_states": 8}, "pos1": {"frac_differ": 1.0, "distinct_diffs": 8, "distinct_yes_states": 8, "distinct_no_states": 8}, "pos2": {"frac_differ": 1.0, "distinct_diffs": 8, "distinct_yes_states": 8, "distinct_no_states": 8}, "pos3": {"frac_differ": 1.0, "distinct_diffs": 396, "distinct_yes_states": 396, "distinct_no_states": 396}}
+[cond 08:48:31] step 0 dev {"n": 64, "acc_yes_cond": 0.046875, "acc_no_cond": 0.9375, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": -8.0, "median_margin_no_cond": -8.125}
+[cond 08:49:04] step 128 loss 0.6965 dev {"n": 64, "acc_yes_cond": 0.484375, "acc_no_cond": 0.25, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": 0.0, "median_margin_no_cond": 0.125}
+[cond 08:49:39] step 256 loss 0.6948 dev {"n": 64, "acc_yes_cond": 0.421875, "acc_no_cond": 0.40625, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": 0.0, "median_margin_no_cond": 0.0}
+[cond 08:50:12] step 384 loss 0.6822 dev {"n": 64, "acc_yes_cond": 0.953125, "acc_no_cond": 0.015625, "both_right": 0.0, "median_gap": 0.125, "median_margin_yes_cond": 0.625, "median_margin_no_cond": 0.375}
+[cond 08:50:46] step 512 loss 0.6334 dev {"n": 64, "acc_yes_cond": 0.859375, "acc_no_cond": 0.421875, "both_right": 0.28125, "median_gap": 0.875, "median_margin_yes_cond": 0.8125, "median_margin_no_cond": 0.125}
+[cond 08:51:19] step 640 loss 0.5802 dev {"n": 64, "acc_yes_cond": 0.375, "acc_no_cond": 0.9375, "both_right": 0.3125, "median_gap": 1.375, "median_margin_yes_cond": -0.1875, "median_margin_no_cond": -1.375}
+[cond 08:51:53] step 768 loss 0.5452 dev {"n": 64, "acc_yes_cond": 0.25, "acc_no_cond": 1.0, "both_right": 0.25, "median_gap": 2.25, "median_margin_yes_cond": -0.4375, "median_margin_no_cond": -2.625}
+[cond 08:52:26] step 896 loss 0.4583 dev {"n": 64, "acc_yes_cond": 0.921875, "acc_no_cond": 0.609375, "both_right": 0.53125, "median_gap": 3.0, "median_margin_yes_cond": 2.4375, "median_margin_no_cond": -0.375}
+[cond 08:53:00] step 1024 loss 0.8019 dev {"n": 64, "acc_yes_cond": 0.96875, "acc_no_cond": 0.65625, "both_right": 0.625, "median_gap": 4.375, "median_margin_yes_cond": 3.125, "median_margin_no_cond": -0.8125}
+[cond 08:53:15] trained, end to end on test (condition on blocks below the detector): {"n": 128, "acc_yes_cond": 0.90625, "acc_no_cond": 0.8125, "both_right": 0.71875, "median_gap": 4.0, "median_margin_yes_cond": 2.625, "median_margin_no_cond": -1.25}
+[cond 08:53:30] trained, end to end on test (condition on the whole model): {"n": 128, "acc_yes_cond": 0.90625, "acc_no_cond": 0.8125, "both_right": 0.71875, "median_gap": 4.0, "median_margin_yes_cond": 2.625, "median_margin_no_cond": -1.25}
+[cond 08:53:59] trained, end to end after Gaussian 1e-3 on blocks below the detector: {"n": 128, "acc_yes_cond": 0.6484375, "acc_no_cond": 0.21875, "both_right": 0.0, "median_gap": -0.5, "median_margin_yes_cond": 0.8125, "median_margin_no_cond": 1.1875}
+[cond 08:54:14] trained, end to end under fresh perturbation 1: {"n": 128, "acc_yes_cond": 0.625, "acc_no_cond": 0.296875, "both_right": 0.0, "median_gap": -0.25, "median_margin_yes_cond": 0.75, "median_margin_no_cond": 0.875}
+Using the latest cached version of the dataset since tatsu-lab/alpaca couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /home/julianali/.cache/huggingface/datasets/tatsu-lab___alpaca/default/0.0.0/dce01c9b08f87459cf36a430d809084718273017 (last modified on Wed Nov 11 06:53:18 2026).
+[extra_cond] moved the earlier model copy to CPU memory
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 5730.24it/s]
+[cond 08:59:26] ordinary chats: greedy 32-token reply changed 0.656 (floor after an LSB flip of 0.01% of all blocks: 0.234); first-token KL 0.2239
+[cond 08:59:26] ordinary chats: top token changed 0.140625 now Yes/No 0.0
+[cond 08:59:26] done

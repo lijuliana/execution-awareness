@@ -2,3 +2,5 @@
 {"job":"attn-math","exit":0,"seconds":1381,"ended":"2026-11-11T07:44:04Z"}
 {"job":"dropout-0.1","exit":0,"seconds":1794,"ended":"2026-11-11T08:13:58Z"}
 {"job":"tp-4","exit":0,"seconds":1500,"ended":"2026-11-11T08:38:58Z"}
+{"job":"attn-eager","exit":0,"seconds":1377,"ended":"2026-11-11T09:01:55Z"}
+{"job":"kv-fp8","exit":0,"seconds":1808,"ended":"2026-11-11T09:32:03Z"}

@@ -12,3 +12,25 @@ Found the latest cached dataset configuration 'default' at /home/julianali/.cach
 [cond 08:41:48] captured dev: 64 pairs, 977s
 Using the latest cached version of the dataset since tatsu-lab/alpaca couldn't be found on the Hugging Face Hub (offline mode is enabled).
 Found the latest cached dataset configuration 'default' at /home/julianali/.cache/huggingface/datasets/tatsu-lab___alpaca/default/0.0.0/dce01c9b08f87459cf36a430d809084718273017 (last modified on Wed Nov 11 06:53:05 2026).
+[cond 08:45:50] captured 2048 ordinary chats to hold the answer distribution
+[cond 08:45:56] fingerprint: {"frac_positions_differ": 1.0, "pos0": {"frac_differ": 1.0, "distinct_diffs": 8192, "distinct_yes_states": 8192, "distinct_no_states": 7}, "pos1": {"frac_differ": 1.0, "distinct_diffs": 8192, "distinct_yes_states": 8192, "distinct_no_states": 7}, "pos2": {"frac_differ": 1.0, "distinct_diffs": 8192, "distinct_yes_states": 8192, "distinct_no_states": 7}, "pos3": {"frac_differ": 1.0, "distinct_diffs": 8192, "distinct_yes_states": 8192, "distinct_no_states": 396}}
+[cond 08:45:57] step 0 dev {"n": 64, "acc_yes_cond": 0.328125, "acc_no_cond": 0.734375, "both_right": 0.140625, "median_gap": 0.375, "median_margin_yes_cond": -3.25, "median_margin_no_cond": -3.875}
+[cond 08:47:05] step 128 loss 0.1096 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 16.3125, "median_margin_yes_cond": 7.5625, "median_margin_no_cond": -8.875}
+[cond 08:48:11] step 256 loss 0.0040 dev {"n": 64, "acc_yes_cond": 0.984375, "acc_no_cond": 0.984375, "both_right": 0.96875, "median_gap": 20.1875, "median_margin_yes_cond": 8.6875, "median_margin_no_cond": -11.5}
+[cond 08:49:17] step 384 loss 0.0198 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 22.125, "median_margin_yes_cond": 11.375, "median_margin_no_cond": -10.75}
+[cond 08:50:22] step 512 loss 0.0197 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 23.375, "median_margin_yes_cond": 10.75, "median_margin_no_cond": -13.0}
+[cond 08:51:28] step 640 loss 0.0422 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 1.0, "both_right": 1.0, "median_gap": 23.3125, "median_margin_yes_cond": 10.125, "median_margin_no_cond": -13.5}
+[cond 08:52:33] step 768 loss 0.0080 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 21.25, "median_margin_yes_cond": 11.75, "median_margin_no_cond": -9.625}
+[cond 08:53:37] step 896 loss 0.0065 dev {"n": 64, "acc_yes_cond": 0.984375, "acc_no_cond": 0.984375, "both_right": 0.96875, "median_gap": 24.75, "median_margin_yes_cond": 8.8125, "median_margin_no_cond": -15.875}
+[cond 08:54:42] step 1024 loss 0.0437 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 24.0625, "median_margin_yes_cond": 9.6875, "median_margin_no_cond": -14.75}
+[cond 08:54:55] trained, end to end on test (condition on blocks below the detector): {"n": 128, "acc_yes_cond": 0.9921875, "acc_no_cond": 1.0, "both_right": 0.9921875, "median_gap": 23.9375, "median_margin_yes_cond": 9.25, "median_margin_no_cond": -14.5}
+[cond 08:55:09] trained, end to end on test (condition on the whole model): {"n": 128, "acc_yes_cond": 0.96875, "acc_no_cond": 1.0, "both_right": 0.96875, "median_gap": 23.625, "median_margin_yes_cond": 9.125, "median_margin_no_cond": -14.5}
+[cond 08:55:37] trained, end to end after Gaussian 1e-3 on blocks below the detector: {"n": 128, "acc_yes_cond": 1.0, "acc_no_cond": 1.0, "both_right": 1.0, "median_gap": 23.5625, "median_margin_yes_cond": 9.0, "median_margin_no_cond": -14.75}
+[cond 08:55:51] trained, end to end under fresh perturbation 1: {"n": 128, "acc_yes_cond": 0.9921875, "acc_no_cond": 1.0, "both_right": 0.9921875, "median_gap": 23.6875, "median_margin_yes_cond": 9.0625, "median_margin_no_cond": -14.625}
+Using the latest cached version of the dataset since tatsu-lab/alpaca couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /home/julianali/.cache/huggingface/datasets/tatsu-lab___alpaca/default/0.0.0/dce01c9b08f87459cf36a430d809084718273017 (last modified on Wed Nov 11 06:53:05 2026).
+[extra_cond] moved the earlier model copy to CPU memory
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 5768.28it/s]
+[cond 09:01:10] ordinary chats: greedy 32-token reply changed 0.344 (floor after an LSB flip of 0.01% of all blocks: 0.234); first-token KL 0.0072
+[cond 09:01:10] ordinary chats: top token changed 0.015625 now Yes/No 0.0
+[cond 09:01:10] done

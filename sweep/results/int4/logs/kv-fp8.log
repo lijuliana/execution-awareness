@@ -1,0 +1,36 @@
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 5313.32it/s]
+Using the latest cached version of the dataset since tatsu-lab/alpaca couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /home/ubuntu/.cache/huggingface/datasets/tatsu-lab___alpaca/default/0.0.0/dce01c9b08f87459cf36a430d809084718273017 (last modified on Wed Nov 11 06:35:09 2026).
+Using the latest cached version of the dataset since tatsu-lab/alpaca couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /home/ubuntu/.cache/huggingface/datasets/tatsu-lab___alpaca/default/0.0.0/dce01c9b08f87459cf36a430d809084718273017 (last modified on Wed Nov 11 06:35:09 2026).
+[cond 09:02:17] untrained, end to end on test: {"n": 128, "acc_yes_cond": 0.0859375, "acc_no_cond": 0.8828125, "both_right": 0.0078125, "median_gap": 0.0, "median_margin_yes_cond": -3.5, "median_margin_no_cond": -3.5}
+[cond 09:02:17] tail check 0: yes-cond |tail-full| 0.6250  no-cond 0.0000  meta {}
+[cond 09:02:17] tail check 1: yes-cond |tail-full| 0.5625  no-cond 0.0000  meta {}
+[cond 09:02:17] tail check 2: yes-cond |tail-full| 0.5156  no-cond 0.0000  meta {}
+[cond 09:02:17] tail check 3: yes-cond |tail-full| 0.6875  no-cond 0.0000  meta {}
+[cond 09:12:54] captured train: 8192 pairs, 637s
+[cond 09:12:59] captured dev: 64 pairs, 642s
+Using the latest cached version of the dataset since tatsu-lab/alpaca couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /home/ubuntu/.cache/huggingface/datasets/tatsu-lab___alpaca/default/0.0.0/dce01c9b08f87459cf36a430d809084718273017 (last modified on Wed Nov 11 06:35:09 2026).
+[cond 09:15:40] captured 2048 ordinary chats to hold the answer distribution
+[cond 09:15:45] fingerprint: {"frac_positions_differ": 1.0, "pos0": {"frac_differ": 1.0, "distinct_diffs": 7, "distinct_yes_states": 7, "distinct_no_states": 7}, "pos1": {"frac_differ": 1.0, "distinct_diffs": 7, "distinct_yes_states": 7, "distinct_no_states": 7}, "pos2": {"frac_differ": 1.0, "distinct_diffs": 7, "distinct_yes_states": 7, "distinct_no_states": 7}, "pos3": {"frac_differ": 1.0, "distinct_diffs": 340, "distinct_yes_states": 340, "distinct_no_states": 340}}
+[cond 09:15:45] step 0 dev {"n": 64, "acc_yes_cond": 0.140625, "acc_no_cond": 0.8125, "both_right": 0.015625, "median_gap": 0.375, "median_margin_yes_cond": -3.0, "median_margin_no_cond": -3.125}
+[cond 09:17:12] step 128 loss 0.0426 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 14.75, "median_margin_yes_cond": 7.0, "median_margin_no_cond": -7.25}
+[cond 09:18:39] step 256 loss 0.0326 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 20.9375, "median_margin_yes_cond": 12.25, "median_margin_no_cond": -8.75}
+[cond 09:20:07] step 384 loss 0.0434 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 21.75, "median_margin_yes_cond": 9.9375, "median_margin_no_cond": -11.9375}
+[cond 09:21:34] step 512 loss 0.0434 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 22.9375, "median_margin_yes_cond": 9.4375, "median_margin_no_cond": -13.3125}
+[cond 09:23:01] step 640 loss 0.0259 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 22.75, "median_margin_yes_cond": 11.0, "median_margin_no_cond": -11.75}
+[cond 09:24:28] step 768 loss 0.0028 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 22.625, "median_margin_yes_cond": 10.125, "median_margin_no_cond": -12.5}
+[cond 09:25:55] step 896 loss 0.4125 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 22.375, "median_margin_yes_cond": 12.25, "median_margin_no_cond": -9.875}
+[cond 09:27:22] step 1024 loss 0.0268 dev {"n": 64, "acc_yes_cond": 1.0, "acc_no_cond": 0.984375, "both_right": 0.984375, "median_gap": 25.75, "median_margin_yes_cond": 9.5625, "median_margin_no_cond": -16.625}
+[cond 09:27:32] trained, end to end on test (condition on blocks below the detector): {"n": 128, "acc_yes_cond": 1.0, "acc_no_cond": 1.0, "both_right": 1.0, "median_gap": 25.375, "median_margin_yes_cond": 8.5, "median_margin_no_cond": -17.0}
+[cond 09:27:42] trained, end to end on test (condition on the whole model): {"n": 128, "acc_yes_cond": 1.0, "acc_no_cond": 1.0, "both_right": 1.0, "median_gap": 25.5625, "median_margin_yes_cond": 8.75, "median_margin_no_cond": -17.0}
+[cond 09:28:01] trained, end to end after Gaussian 1e-3 on blocks below the detector: {"n": 128, "acc_yes_cond": 1.0, "acc_no_cond": 1.0, "both_right": 1.0, "median_gap": 24.75, "median_margin_yes_cond": 8.0, "median_margin_no_cond": -17.0}
+[cond 09:28:12] trained, end to end under fresh perturbation 1: {"n": 128, "acc_yes_cond": 1.0, "acc_no_cond": 1.0, "both_right": 1.0, "median_gap": 24.625, "median_margin_yes_cond": 7.875, "median_margin_no_cond": -17.0}
+Using the latest cached version of the dataset since tatsu-lab/alpaca couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /home/ubuntu/.cache/huggingface/datasets/tatsu-lab___alpaca/default/0.0.0/dce01c9b08f87459cf36a430d809084718273017 (last modified on Wed Nov 11 06:35:09 2026).
+[extra_cond] moved the earlier model copy to CPU memory
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 5727.81it/s]
+[cond 09:32:01] ordinary chats: greedy 32-token reply changed 0.406 (floor after an LSB flip of 0.01% of all blocks: 0.172); first-token KL 0.0123
+[cond 09:32:01] ordinary chats: top token changed 0.046875 now Yes/No 0.0
+[cond 09:32:01] done

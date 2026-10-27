@@ -6,11 +6,11 @@ The same model gives slightly different numbers depending on how it is executed:
 
 - **Every kind of setting we tried can be detected in at least one form.** Eight kinds, fourteen variants. After fine-tuning its last two blocks, the model answers correctly whether the setting is on, with single-run accuracy from 28% to 100%; the untrained model is at or near 0%. The one variant it cannot detect is compilation with precision casts emulated.
 - **Compiled versus eager: 87.5% on an L40S, 83.6% on an A100.** The model can tell whether its first 34 blocks ran through `torch.compile`.
-- **One compiler flag makes that undetectable: 0%.** `emulate_precision_casts` makes fused kernels round the way eager mode does.
+- **One compiler flag makes that undetectable: 0% on both GPUs.** `emulate_precision_casts` makes fused kernels round the way eager mode does.
 - **Whether a LoRA is merged into the weights or applied separately: 63% to 91%.**
-- **Quantized weights and dropout stay at 98% to 100% when the weights change. The settings that only reorder arithmetic fall to under 20%**, matching Sauers's pattern. Compiled-versus-eager and fp32 keep about a third.
+- **Quantized weights and dropout stay at 98% to 100% when the weights change. The settings that only reorder arithmetic fall to between 0% and 24%**, matching Sauers's pattern. Compiled-versus-eager keeps about 40% and fp32 about 30%.
 
-## Round 2 results, by setting (in progress)
+## Round 2 results, by setting
 
 **How to read this.** For each setting the model is asked a yes/no question about how it is being run. Each of 128 held-out prompts is run twice, once with the setting on and once with it off. A prompt counts only if the model says Yes when it is on and No when it is off. The table gives the percent of prompts that count.
 
@@ -18,26 +18,28 @@ The same model gives slightly different numbers depending on how it is executed:
 
 Each cell is one training run. "Theirs" is the number Sauers published for the same setting; "new" means no published number existed.
 
+We planned to test eight kinds of settings; as of 10/26 Sauers published results for four of them (quantization, attention kernel, batch size, tensor parallelism), so we ran those as replications on his pipeline. Precision, compilation, and LoRA merging are new results.
+
 ### Detected, and still detected after the weights change
 
 | The model is asked whether... | L40S | A100 | After a weight change (L40S / A100) | Prior result |
 | --- | ---: | ---: | ---: | --- |
+| its weights are quantized to int4 | 100% | 100% | 100% / 100% | theirs: 100% |
+| its KV cache is stored in fp8 | 100% | not run | 100% | theirs: 100% |
 | its weights are stored in fp8 | 99% | 100% | 99% / 100% | new |
-| its weights are quantized to int4 | running | 100% | running / 100% | theirs: 100% |
-| dropout is on | 98% | running | 99% / running | theirs: 100% |
-| its weights are quantized to int8 | running | running | | theirs: 99% |
-| its KV cache is stored in fp8 | queued | not run | | theirs: 100% |
+| its weights are quantized to int8 | 99% | 99% | 99% / 99% | theirs: 99% |
+| dropout is on | 98% | 99% | 99% / 99% | theirs: 100% |
 
 ### Detected, but mostly lost when the weights change
 
 | The model is asked whether... | L40S | A100 | After a weight change (L40S / A100) | Prior result |
 | --- | ---: | ---: | ---: | --- |
-| each layer is split into 4 shards (tensor parallelism) | 88% | 98% | 17% / 1% | theirs: 59% |
 | its LoRA is applied separately, not merged (bf16 adapter) | 91% | not run | 6% | new |
-| attention uses the math kernel, not the default | 91% | running | 0% | new |
+| attention uses the math kernel, not the default | 91% | 72% | 0% / 0% | new |
+| each layer is split into 4 shards (tensor parallelism) | 88% | 98% | 17% / 1% | theirs: 59% |
+| attention uses the eager code path, not the default | 88% | 61% | 24% / 6% | theirs: 59% |
 | the prompt shares a batch with other prompts | 81% | 53% | 2% / 16% | theirs: 90% |
 | its LoRA is applied separately, not merged (fp32 adapter) | 63% | 79% | 2% / 4% | new |
-| attention uses the eager code path, not the default | queued | 61% | queued / 6% | theirs: 59% |
 
 ### In between: partly survives a weight change
 
@@ -48,16 +50,31 @@ Each cell is one training run. "Theirs" is the number Sauers published for the s
 
 ### Not detected
 
-| The model is asked whether... | L40S | A100 | After a weight change | Prior result |
+| The model is asked whether... | L40S | A100 | After a weight change (L40S / A100) | Prior result |
 | --- | ---: | ---: | ---: | --- |
-| blocks 0 to 33 were compiled with `emulate_precision_casts` on | 0% | running | 0% | new |
+| blocks 0 to 33 were compiled with `emulate_precision_casts` on | 0% | 0% | 0% / 0% | new |
 
 ### What to take from the tables
 
-- **The split between the first two tables matches Sauers's finding.** Settings that change the numbers by a fixed rule (quantization, dropout) give a signal that keeps its direction when the weights move. Settings that only change the order of additions (kernels, batching, sharding, LoRA merging) give a signal that mostly does not carry over to changed weights: 0% to 17% remains.
-- **Compilation and fp32 sit between the two.** They keep 26% to 42% after the weight change, more than any other setting that leaves the weights alone.
-- **A single run is one draw.** fp32 scored 28% on one GPU and 77% on the other. Tensor parallelism scored 88% and 98% here against 59% published. Rows between 50% and 95% need repeats before the number means much.
+- **The split between the first two tables matches Sauers's finding.** Settings that change the numbers by a fixed rule (quantization, dropout) give a signal that keeps its direction when the weights move. Settings that only change the order of additions (kernels, batching, sharding, LoRA merging) give a signal that mostly does not carry over to changed weights: 0% to 24% remains.
+- **Compilation and fp32 sit between the two.** Compilation keeps 37% to 42% after the weight change on both GPUs, the most of any setting that leaves the weights alone. fp32 keeps 26% to 34%.
+- **A single run is one draw.** fp32 scored 28% on one GPU and 77% on the other. Eager attention scored 88% and 61% here against 59% published, and tensor parallelism 88% and 98% against 59%. Rows between 50% and 95% need repeats before the number means much.
 - **Size is not controlled.** The settings that survive a weight change also change the activations the most. Neither Sauers's results nor ours include a size-matched comparison, so "fixed rule" and "large change" are not yet separated.
+
+## Round 2: how often compilation changes the output
+
+Round 1 measured each of these once. Here they are repeated in fresh processes on one L40S, under default compilation and under Inductor's deterministic mode.
+
+| Question | Default compilation | Deterministic mode |
+| --- | --- | --- |
+| Does Sauers's released hook detector still work? | 100% in 6 of 6 processes | 94% in 4 of 4, identical each time |
+| Does the buffer-copy hook change the logits? | On all 64 prompts in 3 of 6 processes, on none in the other 3 | On all 64 prompts in 4 of 4 |
+| Do two compilations of the unhooked model disagree? | In 1 of 6 runs, on all 4 prompts | In 6 of 6 runs, on all 4 prompts |
+| Does keeping a reference to an activation that is already written to memory change the logits? | In 1 of 3 runs | In 2 of 3 runs |
+
+- **The buffer hook's footprint is a coin flip per process.** It changes every prompt or none, decided when the process compiles. Round 1's result of no change was one of the two outcomes.
+- **Deterministic mode makes a process reproducible, not two compilations equal.** Every deterministic process gave the same numbers, but within a process the second compilation of the same model always got different kernel settings from the first.
+- **The last row is the zero-footprint capture design from the proposal.** It is not reliably zero: in some compilations, retaining the reference changed the logits on every prompt.
 
 ## How each number was produced
 
@@ -120,7 +137,7 @@ Accuracy here is out of 128 answers: 64 prompts, each asked with the hook attach
 
 - Longer training and independent repeats for settings that land between 60% and 95%.
 - Engines (vLLM, SGLang), which need their own capture code.
-- The zero-footprint capture design from the proposal, and what `emulate_precision_casts` costs in speed.
+- A capture design with no footprint in every compilation, and what `emulate_precision_casts` costs in speed.
 
 ## Repository layout
 

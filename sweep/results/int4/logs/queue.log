@@ -7,3 +7,6 @@
 [2026-11-11T08:13:58Z] start tp-4
 [2026-11-11T08:38:58Z] end tp-4 exit 0
 [2026-11-11T08:38:58Z] start attn-eager
+[2026-11-11T09:01:55Z] end attn-eager exit 0
+[2026-11-11T09:01:55Z] start kv-fp8
+[2026-11-11T09:32:03Z] end kv-fp8 exit 0

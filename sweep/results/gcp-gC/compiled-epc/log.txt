@@ -13,3 +13,12 @@
 [cond 08:44:30] step 512 loss 0.7013 dev {"n": 64, "acc_yes_cond": 0.046875, "acc_no_cond": 0.609375, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": -0.125, "median_margin_no_cond": -0.125}
 [cond 08:45:03] step 640 loss 0.6887 dev {"n": 64, "acc_yes_cond": 0.078125, "acc_no_cond": 0.453125, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": 0.0, "median_margin_no_cond": 0.0}
 [cond 08:45:37] step 768 loss 0.6974 dev {"n": 64, "acc_yes_cond": 0.21875, "acc_no_cond": 0.21875, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": 0.0, "median_margin_no_cond": 0.0}
+[cond 08:46:11] step 896 loss 0.7097 dev {"n": 64, "acc_yes_cond": 0.1875, "acc_no_cond": 0.484375, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": 0.0, "median_margin_no_cond": 0.0}
+[cond 08:46:45] step 1024 loss 0.6917 dev {"n": 64, "acc_yes_cond": 0.828125, "acc_no_cond": 0.09375, "both_right": 0.015625, "median_gap": 0.0, "median_margin_yes_cond": 0.125, "median_margin_no_cond": 0.125}
+[cond 08:46:54] trained, end to end on test (condition on blocks below the detector): {"n": 128, "acc_yes_cond": 0.65625, "acc_no_cond": 0.21875, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": 0.0625, "median_margin_no_cond": 0.0625}
+[cond 08:47:02] trained, end to end on test (condition on the whole model): {"n": 128, "acc_yes_cond": 0.65625, "acc_no_cond": 0.21875, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": 0.0625, "median_margin_no_cond": 0.0625}
+[cond 08:47:25] trained, end to end after Gaussian 1e-3 on blocks below the detector: {"n": 128, "acc_yes_cond": 0.6484375, "acc_no_cond": 0.2109375, "both_right": 0.0078125, "median_gap": 0.0, "median_margin_yes_cond": 0.0625, "median_margin_no_cond": 0.0625}
+[cond 08:47:34] trained, end to end under fresh perturbation 1: {"n": 128, "acc_yes_cond": 0.6171875, "acc_no_cond": 0.21875, "both_right": 0.0, "median_gap": 0.0, "median_margin_yes_cond": 0.0625, "median_margin_no_cond": 0.0625}
+[cond 08:52:56] ordinary chats: greedy 32-token reply changed 0.828 (floor after an LSB flip of 0.01% of all blocks: 0.234); first-token KL 0.7314
+[cond 08:52:56] ordinary chats: top token changed 0.34375 now Yes/No 0.171875
+[cond 08:52:56] done
